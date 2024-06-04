@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_665f1febc7eda",
+    "title": "Paramètres",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Paramètres",
+    "menu_slug": "parametres",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-generic"
+    },
+    "update_button": "Mise à jour",
+    "updated_message": "Options mises à jour",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1717510183
+}
