@@ -21,6 +21,7 @@ require_once 'inc/register-acf.php';
  * Hooks and setup
  */
 require_once 'inc/setup.php';
+require_once 'inc/scripts.php';
 // require_once 'inc/setup-classic-editor.php';
 // require_once 'inc/setup-fallbacks.php';
 // require_once 'inc/setup-gutenberg.php';
