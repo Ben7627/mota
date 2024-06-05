@@ -1,7 +1,7 @@
 <?php 
 
 
-function clean_wp_head()
+function mota_clean_wp_head()
 {
 	remove_action('wp_head', 'rsd_link');
 	remove_action('wp_head', 'wp_generator');
@@ -30,4 +30,4 @@ function clean_wp_head()
 
 	add_filter('embed_oembed_discover', '__return_false');
 }
-add_action('after_setup_theme', __NAMESPACE__ . '\clean_wp_head');
+add_action('after_setup_theme', 'mota_clean_wp_head');
