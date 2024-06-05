@@ -1,3 +1,28 @@
+.site-header-first {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
 ul#menu-menu-principal {
+  display: flex;
   list-style: none;
+}
+ul#menu-menu-principal li {
+  margin-right: 1.5em;
+}
+ul#menu-menu-principal li:last-child {
+  margin-right: 0;
+}
+
+ul#menu-pied-de-page {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+ul#menu-pied-de-page li {
+  margin-right: 8em;
 }/*# sourceMappingURL=style.css.map */

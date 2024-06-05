@@ -14,19 +14,8 @@
 
     <header id="masthead" class="site-header" itemscope itemtype="https://schema.org/WPHeader">
         <div class="site-header-first">
-            <div class="site-header-logo">
-                
-                <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <?php
-                    $logo_menu = get_field('logo_menu');
-                    if ($logo_menu) {
-                        echo '<img src="' . esc_url($logo_menu['url']) . '" alt="' . esc_attr($logo_menu['alt']) . '">';
-                    }
-                    ?>
+            <div class="site-header-logo">  
                   <?php echo the_custom_logo(); ?>
-
-                </a>
-
             </div>
            
             <div class="site-header-menu">
