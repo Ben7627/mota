@@ -21,7 +21,6 @@ function setup()
    * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
    */
   add_theme_support('post-thumbnails');
-  add_image_size('full-width', 1920, 1080, false);
 
   // Register navigation menus.
   register_nav_menus(
@@ -48,6 +47,9 @@ function setup()
 
   // Custom image sizes :
   add_image_size( 'post-slider', 9999, 730, false );
+  add_image_size('home-featured', 2000, 900, true);
+  add_image_size('full-width', 1920, 1080, false);
+
 
   // Ajout logo dans personnaliser menu
   add_theme_support( 'custom-logo' );

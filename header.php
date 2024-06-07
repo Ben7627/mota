@@ -19,16 +19,17 @@
             </div>
            
             <div class="site-header-menu">
-                
-                <nav id="site-navigation" class="main-navigation">
-                    <?php 
-                    wp_nav_menu(
-                        [
-                            'theme_location' => 'main-menu',
-                        ]
-                    ); 
-                    ?>
-                </nav>
+                <?php if (has_nav_menu('main-menu')) : ?>
+                    <nav id="site-navigation" class="main-navigation">
+                        <?php 
+                        wp_nav_menu(
+                            [
+                                'theme_location' => 'main-menu',
+                            ]
+                        ); 
+                        ?>
+                    </nav>
+                <?php endif; ?>
 
             </div>
 
