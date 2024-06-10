@@ -42,6 +42,27 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 }
 
 /* ==========================================================================
+ # Font faces declarations
+========================================================================== */
+@font-face {
+  font-family: "Space-Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  src: url("../fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Space-Mono";
+  font-style: italic;
+  font-weight: 400 700;
+  src: url("../fonts/SpaceMono-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200 300 400 500 600 700;
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+/* ==========================================================================
  # Normalize
 ========================================================================== */
 html {
@@ -57,7 +78,7 @@ html {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: var(--font-default);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -82,12 +103,17 @@ summary {
 }
 
 a {
+  font-family: var(--font-default);
   background-color: transparent;
 }
 
 a:active,
 a:hover {
   outline: 0;
+}
+
+p {
+  font-family: var(--font-default);
 }
 
 b,
@@ -97,6 +123,7 @@ strong {
 
 h1 {
   font-size: 2em;
+  font-family: var(--font-title);
   margin: 0.67em 0;
 }
 
@@ -169,7 +196,6 @@ button,
 html input[type=button],
 input[type=reset],
 input[type=submit] {
-  -webkit-appearance: button;
   cursor: pointer;
 }
 
@@ -200,7 +226,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=search] {
-  -webkit-appearance: textfield;
   box-sizing: content-box;
 }
 
@@ -244,4 +269,19 @@ object,
 video {
   max-width: 100%;
   height: auto;
+}
+
+/* ==========================================================================
+ # Variables (CSS)
+========================================================================== */
+:root {
+  /* Typography
+    ----------------------------------------------- */
+  --font-weight-heavy: 900;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+  --font-default: "Poppins",sans-serif;
+  --font-title: "Space-Mono",sans-serif;
 }/*# sourceMappingURL=style.css.map */

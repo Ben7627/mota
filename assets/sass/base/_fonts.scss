@@ -1,0 +1,25 @@
+/* ==========================================================================
+ # Font faces declarations
+========================================================================== */
+
+@font-face {
+    font-family: 'Space-Mono';
+    font-style: normal;
+    font-weight: 400 700;
+    src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+  }
+
+  
+  @font-face {
+    font-family: 'Space-Mono';
+    font-style: italic;
+    font-weight: 400 700;
+    src: url('../fonts/SpaceMono-Italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200 300 400 500 600 700;
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  }

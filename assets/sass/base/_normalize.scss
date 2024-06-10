@@ -14,7 +14,7 @@ html {
   }
   
   html {
-    font-family: sans-serif;
+    font-family: var(--font-default);
     -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
   }
@@ -40,6 +40,7 @@ html {
   
   
   a {
+    font-family: var(--font-default);
     background-color: transparent;
   }
   
@@ -48,7 +49,9 @@ html {
     outline: 0;
   }
   
-
+  p {
+    font-family: var(--font-default);
+  }
   
   b,
   strong {
@@ -58,6 +61,7 @@ html {
   
   h1 {
     font-size: 2em;
+    font-family: var(--font-title);
     margin: 0.67em 0;
   }
   
@@ -132,7 +136,6 @@ html {
   html input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    -webkit-appearance: button;
     cursor: pointer;
   }
   
@@ -163,7 +166,6 @@ html {
   }
   
   input[type="search"] {
-    -webkit-appearance: textfield;
     box-sizing: content-box;
   }
   
