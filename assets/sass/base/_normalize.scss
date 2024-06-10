@@ -49,21 +49,12 @@ html {
     outline: 0;
   }
   
-  p {
-    font-family: var(--font-default);
-  }
-  
   b,
   strong {
     font-weight: bold;
   }
 
-  
-  h1 {
-    font-size: 2em;
-    font-family: var(--font-title);
-    margin: 0.67em 0;
-  }
+
   
   mark {
     background: #ff0;
