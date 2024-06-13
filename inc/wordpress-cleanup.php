@@ -29,5 +29,7 @@ function mota_clean_wp_head()
 	remove_filter('pre_oembed_result', 'wp_filter_pre_oembed_result', 10);
 
 	add_filter('embed_oembed_discover', '__return_false');
+
 }
 add_action('after_setup_theme', 'mota_clean_wp_head');
+

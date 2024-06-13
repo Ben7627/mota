@@ -10,7 +10,7 @@
     </head>
 
 <body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
-
+<?php wp_body_open(); ?>
     <header id="masthead" class="site-header" itemscope itemtype="https://schema.org/WPHeader">
         <div class="site-header-first">
             <div class="site-header-logo">  
