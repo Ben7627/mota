@@ -2,8 +2,14 @@ h1.title-home {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 50%;
-    color: #fff;
+    top: 38%;
+    color: transparent;
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
 }
 
 img.attachment-home-featured.size-home-featured.wp-post-image {

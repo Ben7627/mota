@@ -5,4 +5,7 @@ ul#menu-pied-de-page {
     li {
         margin-right: 8em;
     }
+    li:last-child {
+        margin-right: 0;
+    }
 }

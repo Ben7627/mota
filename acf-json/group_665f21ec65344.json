@@ -1,11 +1,11 @@
 {
     "key": "group_665f21ec65344",
-    "title": "Logo du menu",
+    "title": "Contact",
     "fields": [
         {
             "key": "field_665f21ec9a787",
-            "label": "Logo du menu",
-            "name": "logo_menu",
+            "label": "Header contact",
+            "name": "header_contact",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -26,6 +26,31 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_66699b5b0a10e",
+            "label": "Formulaire de contact modale",
+            "name": "formulaire_de_contact_modale",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "allow_archives": 0,
+            "multiple": 0,
+            "allow_null": 0
         }
     ],
     "location": [
@@ -46,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717511728
+    "modified": 1718200467
 }

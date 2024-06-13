@@ -9,13 +9,15 @@ get_header(); ?>
 
         <div class="home-slider">
                 <div class="home-header-title">
-        	       <h1 class="title-home"><?php the_title(); ?></h1>
+                   <h1 class="title-home"><?php the_title(); ?></h1>
                 </div>
                 <div class="home-header-img">
                         <?php the_post_thumbnail('home-featured');?>   
                 </div>
         </div>
-
+      <div class="entry__content blocks">
+        <?php the_content(); ?>
+      </div>
 </div>
 <?php 
 get_footer(); ?>
