@@ -6,8 +6,14 @@
     top: 13vh;
     right: 36vw;
     z-index: 2;
+    display: none;
+}
+
+.popup.open {
+    display: block;
 }
 
 .popup-header {
     margin-top: 1rem;
 }
+

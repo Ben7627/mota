@@ -58,6 +58,11 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   top: 13vh;
   right: 36vw;
   z-index: 2;
+  display: none;
+}
+
+.popup.open {
+  display: block;
 }
 
 .popup-header {
