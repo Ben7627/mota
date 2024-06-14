@@ -14,7 +14,7 @@
 // require_once 'inc/_conf/register-assets.php';
 // require_once 'inc/_conf/register-blocks.php';
 require_once 'inc/register-acf.php';
-// require_once 'inc/_conf/register-post-type.php';
+require_once 'inc/register-post-type.php';
 
 
 /**

@@ -4,8 +4,17 @@ ul#menu-pied-de-page {
     list-style: none;
     li {
         margin-right: 8em;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        a {
+            font-family: 'Space-Mono';
+        }
     }
     li:last-child {
         margin-right: 0;
     }
+}
+
+.menu-pied-de-page-container {
+    border-top: 1px solid #000;
 }

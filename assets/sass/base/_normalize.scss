@@ -110,6 +110,10 @@ html {
     color: inherit;
     font: inherit;
     margin: 0;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    background: #FFF;
+    width: 260px;
   }
   
   button {
@@ -141,6 +145,10 @@ html {
   
   input {
     line-height: normal;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+    background: #FFF;
+    height: 40px;
   }
   
   input[type="checkbox"],

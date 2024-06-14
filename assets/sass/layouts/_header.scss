@@ -13,6 +13,9 @@ ul#menu-menu-principal {
     list-style: none;
     li{
         margin-right: 1.5em;
+        a {
+            font-family: 'Space-Mono';
+        }
     }
     li:last-child {
         margin-right: 0;

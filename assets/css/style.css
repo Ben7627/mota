@@ -14,6 +14,9 @@ ul#menu-menu-principal {
 ul#menu-menu-principal li {
   margin-right: 1.5em;
 }
+ul#menu-menu-principal li a {
+  font-family: "Space-Mono";
+}
 ul#menu-menu-principal li:last-child {
   margin-right: 0;
 }
@@ -25,9 +28,18 @@ ul#menu-pied-de-page {
 }
 ul#menu-pied-de-page li {
   margin-right: 8em;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+ul#menu-pied-de-page li a {
+  font-family: "Space-Mono";
 }
 ul#menu-pied-de-page li:last-child {
   margin-right: 0;
+}
+
+.menu-pied-de-page-container {
+  border-top: 1px solid #000;
 }
 
 h1.title-home {
@@ -53,9 +65,9 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 .popup {
   position: absolute;
   width: 500px;
-  height: 690px;
+  height: 760px;
   background-color: #fff;
-  top: 13vh;
+  top: 10vh;
   right: 36vw;
   z-index: 2;
   display: none;
@@ -72,12 +84,23 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 
 .fond-popup.open-fond {
   background-color: #000;
-  width: 99vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   position: absolute;
   top: 0;
   opacity: 0.8;
+}
+
+.popup-formulaire {
+  display: flex;
+  justify-content: center;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+  border-radius: 2px;
+  background: #D8D8D8;
+  padding: 8px 15px;
 }
 
 /* ==========================================================================
@@ -336,6 +359,10 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+  background: #FFF;
+  width: 260px;
 }
 
 button {
@@ -367,6 +394,10 @@ input::-moz-focus-inner {
 
 input {
   line-height: normal;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+  background: #FFF;
+  height: 40px;
 }
 
 input[type=checkbox],

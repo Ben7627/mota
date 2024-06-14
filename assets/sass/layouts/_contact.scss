@@ -1,9 +1,9 @@
 .popup {
     position: absolute;
     width: 500px;
-    height: 690px;
+    height: 760px;
     background-color: #fff;
-    top: 13vh;
+    top: 10vh;
     right: 36vw;
     z-index: 2;
     display: none;
@@ -20,10 +20,21 @@
 
 .fond-popup.open-fond {
     background-color: #000;
-    width: 99vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 2;
     position: absolute;
     top: 0;
     opacity: 0.8;
+}
+
+.popup-formulaire {
+    display: flex;
+    justify-content: center;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+    border-radius: 2px;
+    background: #D8D8D8;
+    padding: 8px 15px;
 }
