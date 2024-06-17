@@ -1,0 +1,26 @@
+.header-photo {
+    display: flex;
+    align-items: flex-end;
+    .column-left {
+        width: 50%;
+        h1 {
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 66px;
+            font-style: italic;
+            line-height: 58px;         
+        }
+        p {
+            font-family: var(--font-title);
+            font-style: normal;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+    }
+    .column-right img {
+        width: 560px;
+        height: 850px;
+        object-fit: cover;
+    }
+}

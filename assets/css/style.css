@@ -103,6 +103,33 @@ input.wpcf7-form-control.wpcf7-submit {
   padding: 8px 15px;
 }
 
+.header-photo {
+  display: flex;
+  align-items: flex-end;
+}
+.header-photo .column-left {
+  width: 50%;
+}
+.header-photo .column-left h1 {
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 66px;
+  font-style: italic;
+  line-height: 58px;
+}
+.header-photo .column-left p {
+  font-family: var(--font-title);
+  font-style: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.header-photo .column-right img {
+  width: 560px;
+  height: 850px;
+  object-fit: cover;
+}
+
 /* ==========================================================================
  # Font faces declarations
 ========================================================================== */
