@@ -103,14 +103,16 @@ input.wpcf7-form-control.wpcf7-submit {
   padding: 8px 15px;
 }
 
-.header-photo {
+.row-photo {
   display: flex;
   align-items: flex-end;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
-.header-photo .column-left {
+.row-photo .column-left {
   width: 50%;
 }
-.header-photo .column-left h1 {
+.row-photo .column-left h1 {
   font-family: var(--font-title);
   text-transform: uppercase;
   font-weight: 400;
@@ -118,16 +120,37 @@ input.wpcf7-form-control.wpcf7-submit {
   font-style: italic;
   line-height: 58px;
 }
-.header-photo .column-left p {
+.row-photo .column-left p {
   font-family: var(--font-title);
   font-style: normal;
   font-size: 1rem;
   text-transform: uppercase;
 }
-.header-photo .column-right img {
-  width: 560px;
+.row-photo .column-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+.row-photo .column-right img {
+  width: 100%;
   height: 850px;
   object-fit: cover;
+}
+
+.row-cta {
+  height: 118px;
+}
+.row-cta .column-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid #000;
+}
+.row-cta .column-right {
+  width: 50%;
 }
 
 /* ==========================================================================
