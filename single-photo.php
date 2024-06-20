@@ -83,10 +83,10 @@ if ( have_posts() ) :
         </div>
     </div>
     <div><?php the_content(); ?></div>
-    <div class="lated-photos">
-        <p class="title-lated-posts">Vous aimerez aussi</p>
-
-    </div>
+    
+    <p class="title-lated-posts">Vous aimerez aussi</p>
+    <?php get_template_part('templates-part/latest-photos');?>
+    
         <?php endwhile;?>
     <?php endif;?>
 <?php get_footer();

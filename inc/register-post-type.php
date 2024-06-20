@@ -18,6 +18,7 @@ function mota_register_post_types() {
         'public' => true,
         'show_in_rest' => true,
         'has_archive' => true,
+		'hierarchical'        => true,
         'supports' => array( 'title', 'editor','thumbnail' ),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-format-image',

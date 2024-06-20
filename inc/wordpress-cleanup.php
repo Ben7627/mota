@@ -32,4 +32,3 @@ function mota_clean_wp_head()
 
 }
 add_action('after_setup_theme', 'mota_clean_wp_head');
-

@@ -1,0 +1,16 @@
+.latest-photos {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 5rem;
+    display: flex;
+    div {
+        width: 50%;
+        justify-content: center;
+        display: flex;
+    }
+    img.thumbnail-photos {
+        width: 564px;
+        height: 495px;
+        object-fit: cover;
+    }
+}
