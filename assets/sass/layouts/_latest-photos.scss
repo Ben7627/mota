@@ -14,3 +14,27 @@
         object-fit: cover;
     }
 }
+
+
+
+/* Responsive */
+
+@media (max-width: 990px) {
+    p.title-lated-posts {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .latest-photos {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        gap: 2rem;
+        div {
+            width: 100%;
+        }
+        img.thumbnail-photos {
+            width: 320px;
+            height: 280px;
+        }
+    }
+}
