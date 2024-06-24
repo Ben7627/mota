@@ -29,7 +29,9 @@
                         ?>
                     </nav>
                 <?php endif; ?>
-
+                <button class="js-menu-toggle menu-toggle">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/burger-icon.png' ); ?>" alt="navigation-mobile" class="button-nav-menu-mobile">
+                </button>
             </div>
 
 

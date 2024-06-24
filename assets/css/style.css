@@ -74,7 +74,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   width: 500px;
   height: 760px;
   background-color: #fff;
@@ -201,16 +201,6 @@ input.wpcf7-form-control.wpcf7-submit {
   cursor: pointer;
 }
 
-p.title-lated-posts {
-  margin-left: 10rem;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  font-family: var(--font-title);
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 1.1rem;
-}
-
 /* Responsive */
 @media (max-width: 1440px) {
   .latest-photos {
@@ -219,6 +209,9 @@ p.title-lated-posts {
   }
 }
 @media (max-width: 990px) {
+  h1.title-home {
+    font-size: 3rem;
+  }
   .row-photo {
     align-items: center;
     flex-direction: column-reverse;
@@ -231,7 +224,7 @@ p.title-lated-posts {
     width: 70%;
   }
   .row-photo .column-left h1 {
-    font-size: 46px;
+    font-size: 36px;
   }
   .row-cta {
     margin: 0;
@@ -262,6 +255,19 @@ p.title-lated-posts {
   width: 564px;
   height: 495px;
   object-fit: cover;
+}
+.latest-photos img.thumbnail-photos:hover {
+  filter: grayscale(80%);
+}
+
+p.title-lated-posts {
+  margin-left: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 
 /* Responsive */
@@ -664,4 +670,53 @@ video {
   --font-weight-light: 300;
   --font-default: "Poppins",sans-serif;
   --font-title: "Space-Mono",sans-serif;
+}
+
+@media (min-width: 992px) {
+  img.button-nav-menu-mobile {
+    display: none;
+  }
+  button.js-menu-toggle.menu-toggle {
+    border: 0px;
+  }
+}
+@media (max-width: 992px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+  }
+  button.js-menu-toggle.menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+    border: 0px;
+  }
+  img.button-nav-menu-mobile {
+    display: block;
+    cursor: pointer;
+  }
+  ul#menu-menu-principal {
+    display: none;
+  }
+  .open ul#menu-menu-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    color: #FFF;
+    background-color: #E00000;
+    left: 0;
+    z-index: 9999;
+  }
+  .open ul#menu-menu-principal a {
+    font-size: 3.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

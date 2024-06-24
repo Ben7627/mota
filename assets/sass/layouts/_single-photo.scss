@@ -86,22 +86,6 @@
 }
 
 
-p.title-lated-posts {
-    margin-left: 10rem;
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-    font-family: var(--font-title);
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 1.1rem;
-}
-
-
-
-
-
-
-
 
 
 /* Responsive */
@@ -117,6 +101,9 @@ p.title-lated-posts {
 
 
 @media (max-width: 990px) {
+    h1.title-home {
+        font-size: 3rem;
+    }
     .row-photo {
         align-items: center;
         flex-direction: column-reverse;
@@ -127,7 +114,7 @@ p.title-lated-posts {
         .column-left {
             width: 70%;
             h1 {
-                font-size: 46px;
+                font-size: 36px;
             }
         }
     }

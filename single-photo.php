@@ -80,6 +80,7 @@ if ( have_posts() ) :
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div><?php the_content(); ?></div>
@@ -89,4 +90,5 @@ if ( have_posts() ) :
     
         <?php endwhile;?>
     <?php endif;?>
+
 <?php get_footer();
