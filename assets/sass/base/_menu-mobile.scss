@@ -4,6 +4,7 @@
     }
     button.js-menu-toggle.menu-toggle {
         border: 0px;
+        display: none;
     }
 }
 
@@ -17,7 +18,9 @@
         z-index: 1000;
         background: #fff;
     }
-
+    .site-header-menu {
+        margin-right: 2rem;
+    }
     button.js-menu-toggle.menu-toggle {
         display: flex;
         justify-content: flex-end;
@@ -47,5 +50,15 @@
         a {
             font-size: 3.5rem;
         }
+    }
+
+    .active img.button-nav-menu-mobile {
+        display: none;
+    }
+    img.button-close-menu-mobile {
+        display: none;
+    }
+    .active img.button-close-menu-mobile {
+        display: block;
     }
 }

@@ -678,6 +678,7 @@ video {
   }
   button.js-menu-toggle.menu-toggle {
     border: 0px;
+    display: none;
   }
 }
 @media (max-width: 992px) {
@@ -688,6 +689,9 @@ video {
     right: 0;
     z-index: 1000;
     background: #fff;
+  }
+  .site-header-menu {
+    margin-right: 2rem;
   }
   button.js-menu-toggle.menu-toggle {
     display: flex;
@@ -718,5 +722,14 @@ video {
   }
   .open ul#menu-menu-principal a {
     font-size: 3.5rem;
+  }
+  .active img.button-nav-menu-mobile {
+    display: none;
+  }
+  img.button-close-menu-mobile {
+    display: none;
+  }
+  .active img.button-close-menu-mobile {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
