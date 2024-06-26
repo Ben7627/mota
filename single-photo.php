@@ -86,7 +86,59 @@ if ( have_posts() ) :
     <div><?php the_content(); ?></div>
     
     <p class="title-lated-posts">Vous aimerez aussi</p>
-    <?php get_template_part('templates-part/latest-photos');?>
+
+        <div class="latest-photos">
+            <?php
+            $current_photo_id = get_the_ID();
+            $terms = get_the_terms( $current_photo_id, 'categoriesphotos' );
+
+            if ( $terms && ! is_wp_error( $terms ) ) {
+                $term_ids = array(); 
+
+                foreach ( $terms as $term ) {
+                    $term_ids[] = $term->term_id; 
+                }
+
+                $args = array(
+                    'post_type' => 'photo',
+                    'posts_per_page' => 5,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'post_status' => 'publish',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'categoriesphotos', 
+                            'field' => 'term_id',
+                            'terms' => $term_ids,
+                        ),
+                    ),
+                );
+
+                $posts = get_posts( $args );
+
+                if ( $posts ) {
+                    $count = 0; 
+                    foreach ( $posts as $post ) {
+                        if ( $count >= 2 ) break; 
+                        setup_postdata( $post );
+
+                        if ( $post->ID != $current_photo_id ) {
+                            ?>
+                            <?php
+                            get_template_part('templates-part/latest-photos');
+                            $count++;
+                        }
+                    }
+                    wp_reset_postdata();
+                } else {
+                    echo 'Aucun post trouvé.';
+                }
+            } else {
+                echo 'Aucune catégorie trouvée pour cette photo.';
+            }
+            ?>
+
+        </div>    
     
         <?php endwhile;?>
     <?php endif;?>

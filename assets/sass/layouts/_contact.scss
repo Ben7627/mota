@@ -38,3 +38,14 @@ input.wpcf7-form-control.wpcf7-submit {
     background: #D8D8D8;
     padding: 8px 15px;
 }
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .popup {
+        width: auto;
+        height: auto;
+        right: 0;
+    }
+}

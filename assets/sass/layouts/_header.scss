@@ -15,6 +15,9 @@ ul#menu-menu-principal {
         margin-right: 1.5em;
         a {
             font-family: 'Space-Mono';
+            &:hover {
+                font-weight: 700;
+            }
         }
     }
     li:last-child {
