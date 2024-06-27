@@ -59,11 +59,7 @@
         justify-content: flex-end;
         .small-photos-header {
             display: flex;
-            flex-direction: column;
-            .arrow-small-photos {
-                display: flex;
-                justify-content: space-between;
-            }
+            align-items: flex-end;
         }
         img.next-img-photo {
             width: 80px;
@@ -71,6 +67,7 @@
         }
         img.previous-img-photo {
             width: 80px;
+            display: none;
         }
         img.arrow-left-photo-single {
             width: 26px;
@@ -81,11 +78,18 @@
             width: 26px;
             height: 8px;
             cursor: pointer;
+            margin-left: 1rem;
         }
     }
 }
 
+a:hover img.next-img-photo.wp-post-image {
+    display: block;
+}
 
+a:hover img.previous-img-photo.wp-post-image {
+    display: block;
+}
 
 
 /* Responsive */

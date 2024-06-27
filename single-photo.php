@@ -49,35 +49,23 @@ if ( have_posts() ) :
             </div>
             <div class="column-right">
                 <div class="small-photos-header">
-                <?php
-                $previous_post = get_previous_post();
-                $next_post = get_next_post();
+                    <?php
+                    $previous_post = get_previous_post();
+                    $next_post = get_next_post();
 
-                if ( ! empty( $next_post ) ) : ?>
-                    <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
-                        <?php echo get_the_post_thumbnail( $next_post->ID, 'thumbnail', array( 'class' => 'previous-img-photo' ) ); ?>
-                    </a>
-                <?php endif; ?>
-
-                <?php if ( ! empty( $previous_post ) ) : ?>
-                    <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>">
-                        <?php echo get_the_post_thumbnail( $previous_post->ID, 'thumbnail', array( 'class' => 'next-img-photo' ) ); ?>
-                    </a>
-                <?php endif; ?>
-                    <div class="arrow-small-photos">
-                        <?php if ( ! empty( $next_post ) ) : ?>
-                            <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+                    if ( ! empty( $previous_post ) ) : ?>
+                            <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>">
+                                <?php echo get_the_post_thumbnail( $previous_post->ID, 'thumbnail', array( 'class' => 'previous-img-photo' ) ); ?>
                                 <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/arrow-left.png' ); ?>" alt="arrow left" class="arrow-left-photo-single">
                             </a>
-                        <?php endif; ?>
+                    <?php endif; ?>
 
-                        <?php if ( ! empty( $previous_post ) ) : ?>
-                            <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>">
+                    <?php if ( ! empty( $next_post ) ) : ?>
+                            <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+                                <?php echo get_the_post_thumbnail( $next_post->ID, 'thumbnail', array( 'class' => 'next-img-photo' ) ); ?>
                                 <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/arrow-right.png' ); ?>" alt="arrow right" class="arrow-right-photo-single">
                             </a>
-                        <?php endif; ?>
-
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
 

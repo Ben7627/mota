@@ -199,11 +199,7 @@ input.wpcf7-form-control.wpcf7-submit {
 }
 .row-cta .column-right .small-photos-header {
   display: flex;
-  flex-direction: column;
-}
-.row-cta .column-right .small-photos-header .arrow-small-photos {
-  display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
 }
 .row-cta .column-right img.next-img-photo {
   width: 80px;
@@ -211,6 +207,7 @@ input.wpcf7-form-control.wpcf7-submit {
 }
 .row-cta .column-right img.previous-img-photo {
   width: 80px;
+  display: none;
 }
 .row-cta .column-right img.arrow-left-photo-single {
   width: 26px;
@@ -221,6 +218,15 @@ input.wpcf7-form-control.wpcf7-submit {
   width: 26px;
   height: 8px;
   cursor: pointer;
+  margin-left: 1rem;
+}
+
+a:hover img.next-img-photo.wp-post-image {
+  display: block;
+}
+
+a:hover img.previous-img-photo.wp-post-image {
+  display: block;
 }
 
 /* Responsive */
