@@ -25,7 +25,7 @@ require_once 'inc/scripts.php';
 // require_once 'inc/setup-classic-editor.php';
 // require_once 'inc/setup-fallbacks.php';
 // require_once 'inc/setup-gutenberg.php';
-// require_once 'inc/hooks-menu.php';
+require_once 'inc/register-ajax.php';
 // require_once 'inc/setup-theme-support.php';
 // require_once 'inc/filters.php';
 // require_once 'inc/hooks-global.php';
