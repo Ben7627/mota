@@ -4,11 +4,11 @@
     </a>
     <div class="img-overlay">
         <div class="header-overlay">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icon-fullscreen.png' ); ?>">
+            <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/icon-fullscreen.svg');?>
         </div>
          <div class="middle-overlay">
             <a href="<?php echo get_permalink( $post->ID ); ?>">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icon-eye.png' ); ?>">
+                <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/icon-eye.svg');?>
             </a>
         </div>
         <div class="footer-overlay">

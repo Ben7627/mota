@@ -54,16 +54,20 @@ if ( have_posts() ) :
                     $next_post = get_next_post();
 
                     if ( ! empty( $previous_post ) ) : ?>
-                            <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>">
+                            <a href="<?php echo esc_url( get_permalink( $previous_post->ID ) ); ?>" class="left-arrow">
                                 <?php echo get_the_post_thumbnail( $previous_post->ID, 'thumbnail', array( 'class' => 'previous-img-photo' ) ); ?>
-                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/arrow-left.png' ); ?>" alt="arrow left" class="arrow-left-photo-single">
+                                <span class="arrow-left-photo-single">
+                                    <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/arrow-left.svg');?>
+                                </span>
                             </a>
                     <?php endif; ?>
 
                     <?php if ( ! empty( $next_post ) ) : ?>
-                            <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+                            <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="right-arrow">
                                 <?php echo get_the_post_thumbnail( $next_post->ID, 'thumbnail', array( 'class' => 'next-img-photo' ) ); ?>
-                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/arrow-right.png' ); ?>" alt="arrow right" class="arrow-right-photo-single">
+                                <span class="arrow-right-photo-single">
+                                    <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/arrow-right.svg');?>
+                                </span>
                             </a>
                     <?php endif; ?>
                 </div>
@@ -90,7 +94,7 @@ if ( have_posts() ) :
                 $args = array(
                     'post_type' => 'photo',
                     'posts_per_page' => 5,
-                    'orderby' => 'date',
+                    'orderby' => 'rand',
                     'order' => 'ASC',
                     'post_status' => 'publish',
                     'tax_query' => array(

@@ -69,18 +69,26 @@
             width: 80px;
             display: none;
         }
-        img.arrow-left-photo-single {
+        span.arrow-left-photo-single {
             width: 26px;
             height: 8px;
             cursor: pointer;
         }
-        img.arrow-right-photo-single {
+        span.arrow-right-photo-single {
             width: 26px;
             height: 8px;
             cursor: pointer;
             margin-left: 1rem;
         }
     }
+}
+
+a:hover.left-arrow {
+    text-align: right;
+}
+
+a:hover.right-arrow {
+    text-align: right;
 }
 
 a:hover img.next-img-photo.wp-post-image {
@@ -93,15 +101,6 @@ a:hover img.previous-img-photo.wp-post-image {
 
 
 /* Responsive */
-
-@media (max-width: 1440px) {
-
-    
-    .latest-photos {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 
 @media (max-width: 990px) {

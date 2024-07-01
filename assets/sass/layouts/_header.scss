@@ -36,6 +36,9 @@ ul#menu-menu-principal {
 
 
 @media (max-width: 990px) {
+    body {
+        padding-top: 80px;
+    }
     .site-header-first {
         margin: 0;
     }

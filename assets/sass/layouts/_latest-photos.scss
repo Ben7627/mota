@@ -1,17 +1,16 @@
 .latest-photos {
     margin-left: 10rem;
     margin-right: 10rem;
-    margin-bottom: 5rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
     .img-container {
-        width: 50%;
-        justify-content: center;
         display: flex;
     }
     img.thumbnail-photos {
         width: 564px;
-        height: 495px;
+        height: 497px;
         object-fit: cover;
     }
 }
@@ -25,7 +24,7 @@
     display: flex;
     flex-direction: column;
     width: 564px;
-    height: 495px;
+    height: 497px;
 
     &:hover {
         opacity: 1;
@@ -84,6 +83,19 @@ p.title-lated-posts {
 
 /* Responsive */
 
+@media (max-width: 1515px) {
+    .latest-photos img.thumbnail-photos {
+        width: 484px;
+        height: 417px;
+        object-fit: cover;
+    }
+    .img-overlay {
+        width: 484px;
+        height: 417px;
+    }
+}
+
+
 @media (max-width: 990px) {
     p.title-lated-posts {
         margin-left: 0;
@@ -94,9 +106,7 @@ p.title-lated-posts {
         margin-left: 0rem;
         margin-right: 0rem;
         gap: 2rem;
-        .img-container {
-            width: 100%;
-        }
+
         img.thumbnail-photos {
             width: 320px;
             height: 280px;

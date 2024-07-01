@@ -30,9 +30,13 @@
                     </nav>
                 <?php endif; ?>
                 <button class="js-menu-toggle menu-toggle">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/burger-icon.png' ); ?>" alt="navigation-mobile" class="button-nav-menu-mobile">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/close-icon.png' ); ?>" alt="navigation-mobile-close" class="button-close-menu-mobile">
-            </button>
+                    <span class="button-nav-menu-mobile">
+                        <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/burger-icon.svg');?>
+                    </span>
+                    <span class="button-close-menu-mobile">
+                        <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/close-icon.svg'); ?>
+                    </span>
+                </button>
             </div>
 
 

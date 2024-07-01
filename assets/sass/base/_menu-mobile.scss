@@ -18,14 +18,21 @@
         z-index: 1000;
         background: #fff;
     }
-    .site-header-menu {
-        margin-right: 2rem;
-    }
-    button.js-menu-toggle.menu-toggle {
+
+    .site-header-first {
+        margin: 0;
         display: flex;
-        justify-content: flex-end;
-        border: 0px;
+        .site-header-logo {
+            margin-left: 2rem;
+        }
+        .site-header-menu {
+            width: 50%;
+            button.js-menu-toggle.menu-toggle {
+                border: 0px;
+            }
+        }
     }
+
     img.button-nav-menu-mobile {
         display: block;
         cursor: pointer;
@@ -52,13 +59,13 @@
         }
     }
 
-    .active img.button-nav-menu-mobile {
+    .active span.button-nav-menu-mobile {
         display: none;
     }
-    img.button-close-menu-mobile {
+    span.button-close-menu-mobile {
         display: none;
     }
-    .active img.button-close-menu-mobile {
+    .active span.button-close-menu-mobile {
         display: block;
     }
 }
