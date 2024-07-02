@@ -12,7 +12,11 @@ jQuery(document).ready(function($) {
                 paged: currentPage,
             },
             success: function (res) {
-                $('.latest-photos').append(res);
+                if (res.trim() === 'no_more_posts') {
+                    $('.load-button-photos').hide();
+                } else {
+                    $('.latest-photos').append(res);
+                }
             }
         });
     });
