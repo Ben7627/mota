@@ -12,12 +12,64 @@ get_header(); ?>
                    <h1 class="title-home"><?php the_title(); ?></h1>
                 </div>
                 <div class="home-header-img">
-                        <?php the_post_thumbnail('home-featured');?>   
+                        <?php
+                        if( function_exists('get_field') ) {
+                                $slider_homepage = get_field('slider_homepage', 'option');
+
+                                if ( $slider_homepage == 'imagemea' ) {
+                                if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail('home-featured');
+                                } else {
+                                        echo '<p>Aucune image mise en avant trouvée sur la page d\'accueil.</p>';
+                                        }
+                                } elseif ( $slider_homepage == 'imageal' ) {
+                                        $args = array(
+                                        'post_type' => 'photo',
+                                        'posts_per_page' => 1,
+                                        'post_status' => 'publish',
+                                        'orderby' => 'rand', 
+                                        'meta_query' => array(
+                                                array(
+                                                'key' => '_thumbnail_id', 
+                                                'compare' => 'EXISTS'
+                                                )
+                                        )
+                                        );
+
+                                        $random_photo_query = new WP_Query($args);
+
+                                        if ( $random_photo_query->have_posts() ) {
+                                        while ( $random_photo_query->have_posts() ) {
+                                                $random_photo_query->the_post();
+                                                echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail(get_the_ID(), 'home-featured') . '</a>';
+                                        }
+                                        } else {
+                                        echo '<p>Aucune image mise en avant trouvée dans les posts "photo".</p>';
+                                        }
+
+                                        wp_reset_postdata();
+                                }
+                                }
+                        ?>
                 </div>
+
         </div>
         <div class="entry__content blocks">
                 <?php the_content(); ?>
         </div>
+
+        <div class="filters-photos">
+                <div class ="filters-categories">
+                
+                </div>
+                <div class ="filters-formats">
+                
+                </div>
+                <div class ="filters-tri">
+                
+                </div>
+        </div>
+
         <div class="latest-photos">
                 <?php 
                 $args = array(
