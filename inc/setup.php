@@ -54,6 +54,10 @@ function setup()
   // Ajout logo dans personnaliser menu
   add_theme_support( 'custom-logo' );
 
+
+  // Ajout css gutenberg
+  add_theme_support( 'wp-block-styles' );
+
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
