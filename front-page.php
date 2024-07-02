@@ -81,7 +81,7 @@ get_header(); ?>
                 <?php 
                 $args = array(
                 'post_type' => 'photo',
-                'posts_per_page' => 20,
+                'posts_per_page' => 8,
                 'orderby' => 'date',
                 'order' => 'DESC',
                 'post_status' => 'publish',
@@ -99,6 +99,9 @@ get_header(); ?>
                 echo 'Aucun post trouvé.';
                 }
                 ?>
+        </div>
+        <div class="load-button">
+                <p class="load-button-photos">Charger plus</p>
         </div>
 </div>
 <?php 

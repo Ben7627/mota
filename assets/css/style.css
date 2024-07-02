@@ -34,7 +34,7 @@ ul#menu-menu-principal li:last-child {
   }
 }
 footer.site-footer {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 ul#menu-pied-de-page {
@@ -105,6 +105,24 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+}
+
+.load-button {
+  display: flex;
+  justify-content: center;
+}
+.load-button p.load-button-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  margin-top: 2.5rem;
+  background: #D8D8D8;
+  width: 272px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: var(--font-title);
 }
 
 .popup {

@@ -37,3 +37,21 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             flex-wrap: wrap;
         }
 }
+
+.load-button {
+    display: flex;
+    justify-content: center;
+    p.load-button-photos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        margin-top: 2.5rem;
+        background: #D8D8D8;
+        width: 272px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-family: var(--font-title);
+    }
+}
