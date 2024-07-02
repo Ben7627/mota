@@ -42,6 +42,13 @@ html {
     background-color: transparent;
   }
   
+span {
+  font-family: var(--font-title);
+  font-style: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
   a:active,
   a:hover {
     outline: 0;

@@ -41,7 +41,7 @@ get_header(); ?>
                                         if ( $random_photo_query->have_posts() ) {
                                         while ( $random_photo_query->have_posts() ) {
                                                 $random_photo_query->the_post();
-                                                echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail(get_the_ID(), 'home-featured') . '</a>';
+                                                echo get_the_post_thumbnail(get_the_ID(), 'home-featured');
                                         }
                                         } else {
                                         echo '<p>Aucune image mise en avant trouvée dans les posts "photo".</p>';
@@ -59,14 +59,21 @@ get_header(); ?>
         </div>
 
         <div class="filters-photos">
-                <div class ="filters-categories">
-                
+                <div class="filters-left">
+                        <div class ="filters-categories">
+                                <select name="categories" class="select-categories">
+                                </select>
+                        </div>
+                        <div class ="filters-formats">
+                                <select name="filters" class="select-filters">
+                                </select>                
+                        </div>
                 </div>
-                <div class ="filters-formats">
-                
-                </div>
-                <div class ="filters-tri">
-                
+                <div class="filters-right">
+                        <div class ="filters-tri">
+                                <select name="filters" class="select-tri">
+                                </select>                   
+                        </div>
                 </div>
         </div>
 

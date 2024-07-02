@@ -8,7 +8,7 @@ if ( have_posts() ) :
         <div class="row-photo">
             <div class="column-left">
                 <h1 class="title-single-photo"><?php the_title(); ?></h1>
-                <p>Référence : <?php echo get_field('reference'); ?></p>
+                <span>Référence :</span> <span class="ref-photo"><?php echo get_field('reference'); ?></span>
                 <p>
                 Catégorie : 
                 <?php 
