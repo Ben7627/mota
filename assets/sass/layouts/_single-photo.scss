@@ -60,14 +60,21 @@
         .small-photos-header {
             display: flex;
             align-items: flex-end;
+            position: relative;
         }
         img.next-img-photo {
             width: 80px;
             display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
         img.previous-img-photo {
             width: 80px;
             display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
         span.arrow-left-photo-single {
             width: 26px;

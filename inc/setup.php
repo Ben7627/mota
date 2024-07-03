@@ -56,7 +56,7 @@ function setup()
 
 
   // Ajout css gutenberg
-  add_theme_support( 'wp-block-styles' );
+  // add_theme_support( 'wp-block-styles' );
 
 }
 

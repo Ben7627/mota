@@ -1,7 +1,5 @@
 <div class="img-container">
-    <a href="<?php echo get_permalink( $post->ID ); ?>">
-        <?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'thumbnail-photos' ) ); ?>
-    </a>
+    <?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'thumbnail-photos' ) ); ?>
     <div class="img-overlay">
         <div class="header-overlay">
             <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/icon-fullscreen.svg');?>
