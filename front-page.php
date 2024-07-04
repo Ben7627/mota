@@ -60,19 +60,56 @@ get_header(); ?>
 
         <div class="filters-photos">
                 <div class="filters-left">
-                        <div class ="filters-categories">
-                                <select name="categories" class="select-categories">
-                                </select>
+                        <?php
+                        $categories = get_terms( array(
+                        'taxonomy' => 'categoriesphotos',
+                        'hide_empty' => false, // Affiche les catégories même si elles sont vides
+                        ) );
+
+                        if ( ! is_wp_error( $categories ) ) :
+                        ?>
+                        <div class="filters-categories">
+                                <p class="title-filters-categories">Catégories :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
+                                <ul class="select-categories">
+                                <?php
+                                foreach ( $categories as $category ) {
+                                        echo '<li>' . esc_html( $category->name ) . '</li>';
+                                }
+                                ?>
+                                </ul>
                         </div>
-                        <div class ="filters-formats">
-                                <select name="filters" class="select-filters">
-                                </select>                
+                        <?php endif;?>
+                        <?php
+                        $formats = get_terms( array(
+                        'taxonomy' => 'format',
+                        'hide_empty' => false, 
+                        ) );
+
+                        if ( ! is_wp_error( $formats ) ) :
+                        ?>
+                        <div class="filters-formats">
+                                <p class="title-filters-formats">Formats :</p>
+                                <ul class="select-filters">
+                                <?php
+                                foreach ( $formats as $format ) {
+                                        echo '<li>' . esc_html( $format->name ) . '</li>';
+                                }
+                                ?>
+                                </ul>
                         </div>
+                        <?php endif;?>
                 </div>
                 <div class="filters-right">
                         <div class ="filters-tri">
-                                <select name="filters" class="select-tri">
-                                </select>                   
+                                <p class="title-filters-tri">Trier par :</p>
+                                <ul class="select-tri">
+                                        <li class="tri-croissant">
+                                        Du plus récent au plus ancien
+                                        </li>
+                                        <li class="tri-decroissant">
+                                        Du plus ancien au plus récent
+                                        </li>
+                                </ul>                   
                         </div>
                 </div>
         </div>

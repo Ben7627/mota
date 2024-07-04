@@ -24,17 +24,64 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
     margin-top: 5rem;
         .filters-left {
             width: 50%;
-            padding-left: 20rem;
+            padding-left: 10rem;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            p.title-filters-categories {
+                display: flex;
+                justify-content: space-between;
+                border-radius: 8px;
+                border: 1.3px solid #B8BBC2;
+                background-color: #FFF;
+                width: 260px;
+                padding: 0.5rem;
+            }
+            .select-categories li {
+                border-radius: 8px;
+                border: 1.3px solid #B8BBC2;
+                background-color: #FFF;
+                width: 260px;
+                padding: 0.5rem;
+                list-style: none;
+            }
+            p.title-filters-formats {
+                border-radius: 8px;
+                border: 1.3px solid #B8BBC2;
+                background-color: #FFF;
+                width: 260px;
+                padding: 0.5rem;
+            }
+            .select-filters li {
+                border-radius: 8px;
+                border: 1.3px solid #B8BBC2;
+                background-color: #FFF;
+                width: 260px;
+                padding: 0.5rem;
+                list-style: none;
+            }
         }
         .filters-right {
             width: 50%;
-            padding-right: 23rem;
+            padding-right: 10rem;
             display: flex;
             justify-content: flex-end;
             flex-wrap: wrap;
+            p.title-filters-tri {
+                border-radius: 8px;
+                border: 1.3px solid #B8BBC2;
+                background-color: #FFF;
+                width: 260px;
+                padding: 0.5rem;
+            }
+            .select-tri li {
+                border-radius: 8px;
+                border: 1.3px solid #B8BBC2;
+                background-color: #FFF;
+                width: 260px;
+                padding: 0.5rem;
+                list-style: none;
+            }
         }
 }
 
