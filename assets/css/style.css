@@ -845,13 +845,14 @@ video {
     display: flex;
   }
   .site-header-first .site-header-logo {
-    margin-left: 2rem;
+    padding-left: 2rem;
   }
   .site-header-first .site-header-menu {
     width: 50%;
   }
   .site-header-first .site-header-menu button.js-menu-toggle.menu-toggle {
     border: 0px;
+    padding-right: 2rem;
   }
   img.button-nav-menu-mobile {
     display: block;

@@ -23,12 +23,13 @@
         margin: 0;
         display: flex;
         .site-header-logo {
-            margin-left: 2rem;
+            padding-left: 2rem;
         }
         .site-header-menu {
             width: 50%;
             button.js-menu-toggle.menu-toggle {
                 border: 0px;
+                padding-right: 2rem;
             }
         }
     }
