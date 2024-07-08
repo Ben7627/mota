@@ -13,8 +13,9 @@ function mota_scripts ()
 }
 
 add_action('wp_enqueue_scripts','mota_scripts', 20);
-
 add_action( 'wp_enqueue_scripts', 'mota_deregister_styles', 20 );
+
+
 function mota_deregister_styles() {
     wp_dequeue_style( 'classic-theme-styles' );
 

@@ -24,10 +24,14 @@
         display: flex;
         .site-header-logo {
             padding-left: 2rem;
+            width: 50%;
         }
         .site-header-menu {
             width: 50%;
             button.js-menu-toggle.menu-toggle {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
                 border: 0px;
                 padding-right: 2rem;
             }
@@ -68,5 +72,9 @@
     }
     .active span.button-close-menu-mobile {
         display: block;
+    }
+    .entry__content.blocks {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }

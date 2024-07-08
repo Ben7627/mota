@@ -99,13 +99,16 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+.filters-photos .filters-left .filters-categories {
+  margin-right: 2rem;
+}
 .filters-photos .filters-left p.title-filters-categories {
   display: flex;
   justify-content: space-between;
   border-radius: 8px;
   border: 1.3px solid #B8BBC2;
   background-color: #FFF;
-  width: 260px;
+  width: 220px;
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -120,9 +123,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   display: block;
 }
 .filters-photos .filters-left .select-categories li {
-  border-radius: 8px;
   background-color: #FFF;
-  width: 260px;
+  width: 220px;
   padding: 0.5rem;
   list-style: none;
   cursor: pointer;
@@ -133,7 +135,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   border-radius: 8px;
   border: 1.3px solid #B8BBC2;
   background-color: #FFF;
-  width: 260px;
+  width: 220px;
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -148,9 +150,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   display: block;
 }
 .filters-photos .filters-left .select-filters li {
-  border-radius: 8px;
   background-color: #FFF;
-  width: 260px;
+  width: 220px;
   padding: 0.5rem;
   list-style: none;
   cursor: pointer;
@@ -168,7 +169,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   border-radius: 8px;
   border: 1.3px solid #B8BBC2;
   background-color: #FFF;
-  width: 260px;
+  width: 220px;
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -183,9 +184,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   display: block;
 }
 .filters-photos .filters-right .select-tri li {
-  border-radius: 8px;
   background-color: #FFF;
-  width: 260px;
+  width: 220px;
   padding: 0.5rem;
   list-style: none;
   cursor: pointer;
@@ -513,7 +513,7 @@ p.title-lated-posts {
     height: 280px;
   }
   .img-overlay {
-    width: 100%;
+    width: auto;
     height: 280px;
   }
 }
@@ -930,11 +930,15 @@ video {
   }
   .site-header-first .site-header-logo {
     padding-left: 2rem;
+    width: 50%;
   }
   .site-header-first .site-header-menu {
     width: 50%;
   }
   .site-header-first .site-header-menu button.js-menu-toggle.menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     border: 0px;
     padding-right: 2rem;
   }
@@ -971,5 +975,9 @@ video {
   }
   .active span.button-close-menu-mobile {
     display: block;
+  }
+  .entry__content.blocks {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

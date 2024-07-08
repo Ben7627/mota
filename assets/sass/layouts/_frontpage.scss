@@ -28,13 +28,16 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             display: flex;
             justify-content: flex-start;
             flex-wrap: wrap;
+            .filters-categories {
+                margin-right: 2rem;
+            }
             p.title-filters-categories {
                 display: flex;
                 justify-content: space-between;
                 border-radius: 8px;
                 border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
-                width: 260px;
+                width: 220px;
                 padding: 0.5rem;
                 cursor: pointer;
             }
@@ -49,9 +52,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 display: block;
             }
             .select-categories li {
-                border-radius: 8px;
                 background-color: #FFF;
-                width: 260px;
+                width: 220px;
                 padding: 0.5rem;
                 list-style: none;
                 cursor: pointer;
@@ -62,7 +64,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 border-radius: 8px;
                 border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
-                width: 260px;
+                width: 220px;
                 padding: 0.5rem;
                 cursor: pointer;
             }
@@ -77,9 +79,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 display: block;
             }
             .select-filters li {
-                border-radius: 8px;
                 background-color: #FFF;
-                width: 260px;
+                width: 220px;
                 padding: 0.5rem;
                 list-style: none;
                 cursor: pointer;
@@ -97,7 +98,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 border-radius: 8px;
                 border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
-                width: 260px;
+                width: 220px;
                 padding: 0.5rem;
                 cursor: pointer;
             }
@@ -112,9 +113,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 display: block;
             }
             .select-tri li {
-                border-radius: 8px;
                 background-color: #FFF;
-                width: 260px;
+                width: 220px;
                 padding: 0.5rem;
                 list-style: none;
                 cursor: pointer;

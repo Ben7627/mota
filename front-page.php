@@ -63,7 +63,7 @@ get_header(); ?>
                         <?php
                         $categories = get_terms( array(
                         'taxonomy' => 'categoriesphotos',
-                        'hide_empty' => false, // Affiche les catégories même si elles sont vides
+                        'hide_empty' => false, 
                         ) );
 
                         if ( ! is_wp_error( $categories ) ) :
@@ -103,12 +103,8 @@ get_header(); ?>
                         <div class ="filters-tri">
                                 <p class="title-filters-tri">Trier par :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
                                 <ul class="select-tri">
-                                        <li class="tri-croissant">
-                                        Du plus récent au plus ancien
-                                        </li>
-                                        <li class="tri-decroissant">
-                                        Du plus ancien au plus récent
-                                        </li>
+                                        <li class="tri-croissant">Du plus récent au plus ancien</li>
+                                        <li class="tri-decroissant">Du plus ancien au plus récent</li>
                                 </ul>                   
                         </div>
                 </div>
