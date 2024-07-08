@@ -414,6 +414,7 @@ a:hover img.previous-img-photo.wp-post-image {
   gap: 3rem;
 }
 .latest-photos .img-container {
+  position: relative;
   display: flex;
   width: 50%;
 }
@@ -431,6 +432,7 @@ a:hover img.previous-img-photo.wp-post-image {
   display: flex;
   flex-direction: column;
   height: 500px;
+  width: 100%;
 }
 .img-overlay:hover {
   opacity: 1;
@@ -490,7 +492,7 @@ p.title-lated-posts {
     object-fit: cover;
   }
   .img-overlay {
-    width: 484px;
+    width: 100%;
     height: 417px;
   }
 }
@@ -513,7 +515,7 @@ p.title-lated-posts {
     height: 280px;
   }
   .img-overlay {
-    width: auto;
+    width: 100%;
     height: 280px;
   }
 }

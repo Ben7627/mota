@@ -15,6 +15,8 @@
 // require_once 'inc/_conf/register-blocks.php';
 require_once 'inc/register-acf.php';
 require_once 'inc/register-post-type.php';
+require_once 'inc/ajax/register-button-load-more.php';
+require_once 'inc/ajax/register-filters-select.php';
 
 
 /**
@@ -25,7 +27,6 @@ require_once 'inc/scripts.php';
 // require_once 'inc/setup-classic-editor.php';
 // require_once 'inc/setup-fallbacks.php';
 // require_once 'inc/setup-gutenberg.php';
-require_once 'inc/register-ajax.php';
 // require_once 'inc/setup-theme-support.php';
 // require_once 'inc/filters.php';
 // require_once 'inc/hooks-global.php';

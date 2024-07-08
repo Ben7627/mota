@@ -63,17 +63,17 @@ get_header(); ?>
                         <?php
                         $categories = get_terms( array(
                         'taxonomy' => 'categoriesphotos',
-                        'hide_empty' => false, 
+                        'hide_empty' => false,
                         ) );
 
                         if ( ! is_wp_error( $categories ) ) :
                         ?>
                         <div class="filters-categories">
                                 <p class="title-filters-categories">Catégories :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
-                                <ul class="select-categories">
+                                <ul class="select-categories filtrage">
                                 <?php
                                 foreach ( $categories as $category ) {
-                                        echo '<li>' . esc_html( $category->name ) . '</li>';
+                                        echo '<li data-slug="'. esc_html($category->slug) .'">' . esc_html( $category->name ) . '</li>';
                                 }
                                 ?>
                                 </ul>
@@ -89,10 +89,10 @@ get_header(); ?>
                         ?>
                         <div class="filters-formats">
                                 <p class="title-filters-formats">Formats :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
-                                <ul class="select-filters">
+                                <ul class="select-filters filtrage">
                                 <?php
                                 foreach ( $formats as $format ) {
-                                        echo '<li>' . esc_html( $format->name ) . '</li>';
+                                        echo '<li data-format="'. esc_html($format->slug) .'">' . esc_html( $format->name ) . '</li>';
                                 }
                                 ?>
                                 </ul>
@@ -102,7 +102,7 @@ get_header(); ?>
                 <div class="filters-right">
                         <div class ="filters-tri">
                                 <p class="title-filters-tri">Trier par :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
-                                <ul class="select-tri">
+                                <ul class="select-tri filtrage">
                                         <li class="tri-croissant">Du plus récent au plus ancien</li>
                                         <li class="tri-decroissant">Du plus ancien au plus récent</li>
                                 </ul>                   
