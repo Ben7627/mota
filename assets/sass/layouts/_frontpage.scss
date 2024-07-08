@@ -36,29 +36,53 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 background-color: #FFF;
                 width: 260px;
                 padding: 0.5rem;
+                cursor: pointer;
+            }
+            .title-filters-categories.active svg {
+                rotate: 180deg;
+            }
+            ul.select-categories {
+                padding: 0;
+                display: none;
+            }
+            ul.select-categories.open {
+                display: block;
             }
             .select-categories li {
                 border-radius: 8px;
-                border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
                 width: 260px;
                 padding: 0.5rem;
                 list-style: none;
+                cursor: pointer;
             }
             p.title-filters-formats {
+                display: flex;
+                justify-content: space-between;
                 border-radius: 8px;
                 border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
                 width: 260px;
                 padding: 0.5rem;
+                cursor: pointer;
+            }
+            .title-filters-formats.active svg {
+                rotate: 180deg;
+            }
+            ul.select-filters {
+                padding: 0;
+                display: none;
+            }
+            ul.select-filters.open {
+                display: block;
             }
             .select-filters li {
                 border-radius: 8px;
-                border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
                 width: 260px;
                 padding: 0.5rem;
                 list-style: none;
+                cursor: pointer;
             }
         }
         .filters-right {
@@ -68,19 +92,32 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             justify-content: flex-end;
             flex-wrap: wrap;
             p.title-filters-tri {
+                display: flex;
+                justify-content: space-between;
                 border-radius: 8px;
                 border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
                 width: 260px;
                 padding: 0.5rem;
+                cursor: pointer;
+            }
+            .title-filters-tri.active svg {
+                rotate: 180deg;
+            }
+            ul.select-tri {
+                padding: 0;
+                display: none;
+            }
+            ul.select-tri.open {
+                display: block;
             }
             .select-tri li {
                 border-radius: 8px;
-                border: 1.3px solid #B8BBC2;
                 background-color: #FFF;
                 width: 260px;
                 padding: 0.5rem;
                 list-style: none;
+                cursor: pointer;
             }
         }
 }

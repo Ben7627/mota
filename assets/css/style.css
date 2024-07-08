@@ -107,29 +107,53 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   background-color: #FFF;
   width: 260px;
   padding: 0.5rem;
+  cursor: pointer;
+}
+.filters-photos .filters-left .title-filters-categories.active svg {
+  rotate: 180deg;
+}
+.filters-photos .filters-left ul.select-categories {
+  padding: 0;
+  display: none;
+}
+.filters-photos .filters-left ul.select-categories.open {
+  display: block;
 }
 .filters-photos .filters-left .select-categories li {
   border-radius: 8px;
-  border: 1.3px solid #B8BBC2;
   background-color: #FFF;
   width: 260px;
   padding: 0.5rem;
   list-style: none;
+  cursor: pointer;
 }
 .filters-photos .filters-left p.title-filters-formats {
+  display: flex;
+  justify-content: space-between;
   border-radius: 8px;
   border: 1.3px solid #B8BBC2;
   background-color: #FFF;
   width: 260px;
   padding: 0.5rem;
+  cursor: pointer;
+}
+.filters-photos .filters-left .title-filters-formats.active svg {
+  rotate: 180deg;
+}
+.filters-photos .filters-left ul.select-filters {
+  padding: 0;
+  display: none;
+}
+.filters-photos .filters-left ul.select-filters.open {
+  display: block;
 }
 .filters-photos .filters-left .select-filters li {
   border-radius: 8px;
-  border: 1.3px solid #B8BBC2;
   background-color: #FFF;
   width: 260px;
   padding: 0.5rem;
   list-style: none;
+  cursor: pointer;
 }
 .filters-photos .filters-right {
   width: 50%;
@@ -139,19 +163,32 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   flex-wrap: wrap;
 }
 .filters-photos .filters-right p.title-filters-tri {
+  display: flex;
+  justify-content: space-between;
   border-radius: 8px;
   border: 1.3px solid #B8BBC2;
   background-color: #FFF;
   width: 260px;
   padding: 0.5rem;
+  cursor: pointer;
+}
+.filters-photos .filters-right .title-filters-tri.active svg {
+  rotate: 180deg;
+}
+.filters-photos .filters-right ul.select-tri {
+  padding: 0;
+  display: none;
+}
+.filters-photos .filters-right ul.select-tri.open {
+  display: block;
 }
 .filters-photos .filters-right .select-tri li {
   border-radius: 8px;
-  border: 1.3px solid #B8BBC2;
   background-color: #FFF;
   width: 260px;
   padding: 0.5rem;
   list-style: none;
+  cursor: pointer;
 }
 
 .home .latest-photos {

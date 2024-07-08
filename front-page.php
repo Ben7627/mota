@@ -88,7 +88,7 @@ get_header(); ?>
                         if ( ! is_wp_error( $formats ) ) :
                         ?>
                         <div class="filters-formats">
-                                <p class="title-filters-formats">Formats :</p>
+                                <p class="title-filters-formats">Formats :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
                                 <ul class="select-filters">
                                 <?php
                                 foreach ( $formats as $format ) {
@@ -101,7 +101,7 @@ get_header(); ?>
                 </div>
                 <div class="filters-right">
                         <div class ="filters-tri">
-                                <p class="title-filters-tri">Trier par :</p>
+                                <p class="title-filters-tri">Trier par :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
                                 <ul class="select-tri">
                                         <li class="tri-croissant">
                                         Du plus récent au plus ancien
