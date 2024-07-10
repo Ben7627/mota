@@ -5,6 +5,7 @@
         $paged = $_POST['paged'];
         $category = $_POST['category'];
         $format = $_POST['format'];
+        $order = isset($_POST['order']) ? sanitize_text_field($_POST['order']) : 'DESC';
     
         $tax_query = array('relation' => 'AND');
     
@@ -29,7 +30,7 @@
             'posts_per_page' => 8,
             'paged' => $paged,
             'orderby' => 'date',
-            'order' => 'DESC',
+            'order' => $order,
             'post_status' => 'publish',
             'tax_query' => $tax_query,
         );

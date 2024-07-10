@@ -51,13 +51,29 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             ul.select-categories.open {
                 display: block;
             }
-            .select-categories li {
-                background-color: #FFF;
-                width: 220px;
-                padding: 0.5rem;
-                list-style: none;
-                cursor: pointer;
+            .select-categories {
+                    li {
+                    background-color: #FFF;
+                    width: 220px;
+                    padding: 0.5rem;
+                    list-style: none;
+                    cursor: pointer;
+
+                    &:active {
+                        background-color: #FE5858;
+                        color: #fff;  
+                    }
+
+                    &:hover {
+                        background-color: #FFD6D6;
+                    }
+                }
+                li.active {
+                    background-color: #E00000;
+                    color: #fff;                      
+                }
             }
+
             p.title-filters-formats {
                 display: flex;
                 justify-content: space-between;
@@ -78,12 +94,28 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             ul.select-filters.open {
                 display: block;
             }
-            .select-filters li {
-                background-color: #FFF;
-                width: 220px;
-                padding: 0.5rem;
-                list-style: none;
-                cursor: pointer;
+            .select-filters {
+                    li {
+                        background-color: #FFF;
+                        width: 220px;
+                        padding: 0.5rem;
+                        list-style: none;
+                        cursor: pointer;
+
+                        &:active {
+                            background-color: #FE5858;
+                            color: #fff;  
+                        }
+
+                        &:hover {
+                            background-color: #FFD6D6;
+                        }
+                    }
+                    li.active {
+                        background-color: #E00000;
+                        color: #fff;                      
+                    }
+                }
             }
         }
         .filters-right {
@@ -112,15 +144,29 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             ul.select-tri.open {
                 display: block;
             }
-            .select-tri li {
-                background-color: #FFF;
-                width: 220px;
-                padding: 0.5rem;
-                list-style: none;
-                cursor: pointer;
+            .select-tri {
+                li {
+                    background-color: #FFF;
+                    width: 220px;
+                    padding: 0.5rem;
+                    list-style: none;
+                    cursor: pointer;
+
+                    &:active {
+                        background-color: #FE5858;
+                        color: #fff;  
+                    }
+
+                    &:hover {
+                        background-color: #FFD6D6;
+                    }
+                }
+                li.active {
+                    background-color: #E00000;
+                    color: #fff;                      
+                }
             }
         }
-}
 
 .home .latest-photos {
     flex-wrap: wrap;
@@ -144,5 +190,43 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
         cursor: pointer;
         font-size: 0.8rem;
         font-family: var(--font-title);
+    }
+}
+
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .filters-photos {
+        display: flex;
+        flex-direction: column;
+
+        .filters-left {
+            width: 100%;
+            padding-left: 0;
+            .filters-categories {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 0;
+            }
+            .filters-formats {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .filters-right {
+            width: 100%;
+            padding-right: 0rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
 }

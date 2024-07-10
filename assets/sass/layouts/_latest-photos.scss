@@ -97,7 +97,10 @@ p.title-lated-posts {
 }
 
 
-@media (max-width: 990px) {
+@media (max-width: 992px) {
+    .home .latest-photos .img-container {
+        width: 70%;
+    }
     p.title-lated-posts {
         margin-left: 0;
         display: flex;
@@ -110,6 +113,10 @@ p.title-lated-posts {
         margin-left: 0rem;
         margin-right: 0rem;
         gap: 2rem;
+
+        .img-container {
+            width: 70%;
+        }
 
         img.thumbnail-photos {
             width: 100%;

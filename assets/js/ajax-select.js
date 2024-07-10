@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+    let order = 'DESC';
+
     function filterPhotos() {
         let category = $('.select-categories .active').data('slug') || '';
         let format = $('.select-filters .active').data('format') || '';
@@ -7,7 +9,8 @@ jQuery(document).ready(function($) {
             action: 'mota_filters_select',
             category: category,
             format: format,
-            paged: paged
+            paged: paged,
+            order: order
         };
 
         $.ajax({
@@ -28,6 +31,8 @@ jQuery(document).ready(function($) {
         });
     }
 
+
+    
     $('.select-categories li').on('click', function() {
         $('.select-categories li').removeClass('active');
         $(this).addClass('active');
@@ -36,6 +41,22 @@ jQuery(document).ready(function($) {
 
     $('.select-filters li').on('click', function() {
         $('.select-filters li').removeClass('active');
+        $(this).addClass('active');
+        filterPhotos();
+    });
+
+    $('.tri-croissant').on('click', function() {
+        order = 'ASC';
+        $('.tri-decroissant').removeClass('active');
+        $('.tri-croissant').removeClass('active');
+        $(this).addClass('active');
+        filterPhotos();
+    });
+
+    $('.tri-decroissant').on('click', function() {
+        order = 'DESC';
+        $('.tri-croissant').removeClass('active');
+        $('.tri-decroissant').removeClass('active');        
         $(this).addClass('active');
         filterPhotos();
     });
