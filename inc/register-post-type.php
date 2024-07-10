@@ -22,6 +22,10 @@ function mota_register_post_types() {
         'supports' => array( 'title', 'editor','thumbnail' ),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-format-image',
+		'rewrite' => array(
+            'slug' => '%categoriesphotos%', // Structure personnalisée
+            'with_front' => false // Pour éviter d'ajouter /blog/ ou d'autres préfixes
+        )
 	);
 
 	register_post_type( 'photo', $args );
@@ -93,3 +97,17 @@ function mota_add_taxonomies() {
 
 	register_taxonomy( 'categoriesphotos', 'photo', $args_cat_photo );
 }
+
+add_action('init', 'mota_add_taxonomies', 0);
+
+function mota_custom_post_type_link($post_link, $post, $leavename, $sample) {
+    if ($post->post_type == 'photo') {
+        if ($terms = get_the_terms($post->ID, 'categoriesphotos')) {
+            $post_link = str_replace('%categoriesphotos%', array_pop($terms)->slug, $post_link);
+        } else {
+            $post_link = str_replace('%categoriesphotos%', 'uncategorized', $post_link);
+        }
+    }
+    return $post_link;
+}
+add_filter('post_type_link', 'mota_custom_post_type_link', 10, 4);
