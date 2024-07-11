@@ -22,8 +22,9 @@ function mota_register_post_types() {
         'supports' => array( 'title', 'editor','thumbnail' ),
         'menu_position' => 5, 
         'menu_icon' => 'dashicons-format-image',
+		'has_archive' => 'portfolio',
 		'rewrite' => array(
-            'slug' => '%categoriesphotos%', // Structure personnalisée
+            'slug' => 'portfolio/%categoriesphotos%', // Structure personnalisée
             'with_front' => false // Pour éviter d'ajouter /blog/ ou d'autres préfixes
         )
 	);
@@ -92,7 +93,7 @@ function mota_add_taxonomies() {
 		'show_in_rest'			=> true,
 		'show_admin_column'     => true,
 		'query_var'             => true,
-		'rewrite'               => array( 'slug' => 'categories-photos' ),
+		'rewrite'               => array( 'slug' => 'portfolio' ),
 	);
 
 	register_taxonomy( 'categoriesphotos', 'photo', $args_cat_photo );
