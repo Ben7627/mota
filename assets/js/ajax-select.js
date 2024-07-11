@@ -3,7 +3,9 @@ jQuery(document).ready(function($) {
 
     function filterPhotos() {
         let category = $('.select-categories .active').data('slug') || '';
+        let titreCategory = $('.title-filters-categories');
         let format = $('.select-filters .active').data('format') || '';
+        let titreFormat = $('.title-filters-formats');
         let paged = 1; 
         let data = {
             action: 'mota_filters_select',
@@ -12,6 +14,14 @@ jQuery(document).ready(function($) {
             paged: paged,
             order: order
         };
+
+        // Pour remplacement du titre du select
+        let categoryText = $('.select-categories .active').text();
+        titreCategory.text(categoryText);
+
+        let formatText = $('.select-filters .active').text();
+        titreFormat.text(formatText);
+
 
         $.ajax({
             url: mota_js.ajaxurl,
@@ -36,12 +46,16 @@ jQuery(document).ready(function($) {
     $('.select-categories li').on('click', function() {
         $('.select-categories li').removeClass('active');
         $(this).addClass('active');
+        let categoryText = $(this).text();
+        $('.title-filters-categories').text(categoryText);
         filterPhotos();
     });
 
     $('.select-filters li').on('click', function() {
         $('.select-filters li').removeClass('active');
         $(this).addClass('active');
+        let formatText = $(this).text();
+        $('.title-filters-formats').text(formatText);
         filterPhotos();
     });
 

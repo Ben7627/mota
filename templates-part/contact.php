@@ -1,5 +1,6 @@
 <div class="fond-popup">
 </div>
+<div class="align-popup">
     <div class="popup">
 
         <div class="popup-header">
@@ -36,3 +37,4 @@
         </div>
 
     </div>
+</div>

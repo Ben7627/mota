@@ -1,22 +1,48 @@
-.popup {
-    position: fixed;
-    width: 500px;
-    height: 760px;
-    background-color: #fff;
-    top: 10vh;
-    right: 36vw;
-    z-index: 2;
-    display: none;
-    border: 3px solid #000;
+
+.align-popup {
+    display: flex;
+    justify-content: center;
+    
+    .popup {
+        position: fixed;
+        width: 500px;
+        height: 760px;
+        background-color: #fff;
+        z-index: 2;
+        display: none;
+        border: 3px solid #000;
+
+        .popup-header {
+            margin-top: 1rem;
+        }
+        
+        .popup-formulaire {
+            display: flex;
+            justify-content: center;
+            p {
+                display: flex;
+                justify-content: center;
+            }       
+            input.wpcf7-form-control.wpcf7-submit {
+                border-radius: 2px;
+                background: #D8D8D8;
+                padding: 8px 15px;
+            }
+            .wpcf7-spinner {
+                display: none;
+            }
+            .wpcf7 form .wpcf7-response-output {
+                margin: 0;
+            }
+        }
+
+    }
 }
 
 .popup.open {
     display: block;
 }
 
-.popup-header {
-    margin-top: 1rem;
-}
 
 .fond-popup.open-fond {
     background-color: #000;
@@ -28,24 +54,19 @@
     opacity: 0.8;
 }
 
-.popup-formulaire {
-    display: flex;
-    justify-content: center;
-}
-
-input.wpcf7-form-control.wpcf7-submit {
-    border-radius: 2px;
-    background: #D8D8D8;
-    padding: 8px 15px;
-}
 
 
 
 /* Responsive */
 @media (max-width: 992px) {
-    .popup {
-        width: auto;
-        height: auto;
-        right: 0;
+    .align-popup {
+        .popup {
+            width: auto;
+            height: 100vh;
+
+            textarea {
+                height: 100px;
+            }
+        }
     }
 }
