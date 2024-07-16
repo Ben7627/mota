@@ -409,6 +409,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   display: flex;
   align-items: flex-end;
   position: relative;
+  width: 68px;
 }
 .row-cta .column-right img.next-img-photo {
   width: 80px;
@@ -446,10 +447,12 @@ a:hover.right-arrow {
 
 a:hover img.next-img-photo.wp-post-image {
   display: block;
+  margin-top: 1rem;
 }
 
 a:hover img.previous-img-photo.wp-post-image {
   display: block;
+  margin-top: 1rem;
 }
 
 /* Responsive */
@@ -485,6 +488,7 @@ a:hover img.previous-img-photo.wp-post-image {
     display: none;
   }
 }
+/* Photos */
 .latest-photos {
   margin-left: 10rem;
   margin-right: 10rem;
@@ -503,6 +507,7 @@ a:hover img.previous-img-photo.wp-post-image {
   object-fit: cover;
 }
 
+/* Overlay */
 .img-overlay {
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
@@ -561,6 +566,70 @@ p.title-lated-posts {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 1.1rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.lightbox .lightbox__next {
+  border: none;
+  background: url(../images/arrow-next.svg) center center/38px 28px no-repeat;
+  width: 55px;
+  height: 16px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-right: 5rem;
+  color: #fff;
+  z-index: 11;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.lightbox .lightbox__prev {
+  border: none;
+  background: url(../images/arrow-prev.svg) center center/38px 28px no-repeat;
+  width: 55px;
+  height: 16px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  margin-left: 5rem;
+  color: #fff;
+  z-index: 11;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.lightbox .lightbox__close {
+  border: none;
+  background: url(../images/close.svg) center center/23px 23px no-repeat;
+  width: 23px;
+  height: 23px;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 11;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.lightbox .lightbox__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  min-height: 100vh;
+}
+
+.lightbox.open {
+  display: block;
+  z-index: 10;
 }
 
 /* Responsive */
@@ -1050,6 +1119,10 @@ video {
     background-color: #E00000;
     left: 0;
     z-index: 9999;
+    padding: 0;
+  }
+  .open ul#menu-menu-principal li {
+    margin-right: 0;
   }
   .open ul#menu-menu-principal a {
     font-size: 3.5rem;

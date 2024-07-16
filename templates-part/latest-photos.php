@@ -4,7 +4,7 @@
         <div class="header-overlay">
             <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/icon-fullscreen.svg');?>
         </div>
-         <div class="middle-overlay">
+        <div class="middle-overlay">
             <a href="<?php echo get_permalink( $post->ID ); ?>">
                 <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/icon-eye.svg');?>
             </a>
@@ -20,6 +20,14 @@
                 } 
                 echo esc_html( $category_name ); ?>
             </p>
+        </div>
+    </div>
+    <div class="lightbox">
+        <button class="lightbox__close"></button>
+        <button class="lightbox__next">Suivante</button>
+        <button class="lightbox__prev">Précédente</button>
+        <div class="lightbox__container">
+            <?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'lightbox-photos' ) ); ?>
         </div>
     </div>
 </div>

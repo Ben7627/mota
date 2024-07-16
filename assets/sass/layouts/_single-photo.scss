@@ -61,6 +61,7 @@
             display: flex;
             align-items: flex-end;
             position: relative;
+            width: 68px;
         }
         img.next-img-photo {
             width: 80px;
@@ -100,10 +101,12 @@ a:hover.right-arrow {
 
 a:hover img.next-img-photo.wp-post-image {
     display: block;
+    margin-top: 1rem;
 }
 
 a:hover img.previous-img-photo.wp-post-image {
     display: block;
+    margin-top: 1rem;
 }
 
 
