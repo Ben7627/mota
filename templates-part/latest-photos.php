@@ -24,10 +24,22 @@
     </div>
     <div class="lightbox">
         <button class="lightbox__close"></button>
-        <button class="lightbox__next">Suivante</button>
-        <button class="lightbox__prev">Précédente</button>
+        <button class="lightbox__next"></button>
+        <button class="lightbox__prev"></button>
         <div class="lightbox__container">
             <?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'lightbox-photos' ) ); ?>
+            <div class="lightbox__footer">
+                <p class="ref-overlay"><?php $reference = get_field( 'reference', $post->ID ); echo esc_html( $reference ); ?></p>
+                <p class="categ-overlay">
+                    <?php                       
+                    $post_terms = get_the_terms( $post->ID, 'categoriesphotos' );
+                    $category_name = '';
+                    if ( $post_terms && ! is_wp_error( $post_terms ) ) {
+                    $category_name = $post_terms[0]->name; 
+                    } 
+                    echo esc_html( $category_name ); ?>
+                </p>
+            </div>
         </div>
     </div>
 </div>

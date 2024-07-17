@@ -1,0 +1,100 @@
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+
+    .lightbox__next {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border: none;
+        background: url(../images/arrow-next.svg) center center / 38px 28px no-repeat;
+        width: 55px;
+        height: 16px;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        margin-right: 5rem;
+        color: #fff;
+        z-index: 11;
+        opacity: .5;
+        cursor: pointer;
+        
+        &::after {
+            content: 'Suivante';
+            margin: -5rem;
+        }
+    }
+
+    .lightbox__prev {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        border: none;
+        background: url(../images/arrow-prev.svg) center center / 38px 28px no-repeat;
+        width: 55px;
+        height: 16px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        margin-left: 5rem;
+        color: #fff;
+        z-index: 11;
+        opacity: .5;
+        cursor: pointer;
+
+        &::after {
+            content: 'Précente';
+            margin: -5rem;
+        }
+    }
+
+    .lightbox__close {
+        border: none;
+        background: url(../images/close.svg) center center / 23px 23px no-repeat;
+        width: 23px;
+        height: 23px;
+        position: fixed;
+        top: 5rem;
+        right: 5rem;;
+        z-index: 11;
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .lightbox__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        min-height: 100vh;
+
+        img {
+            height: 800px;
+            object-fit: cover;
+        }
+
+        .lightbox__footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+
+            p {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.lightbox.open {
+    display: block;
+    z-index: 10;
+}

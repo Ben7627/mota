@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .site-header-first {
   display: flex;
   height: 80px;
@@ -568,70 +569,6 @@ p.title-lated-posts {
   font-size: 1.1rem;
 }
 
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.lightbox .lightbox__next {
-  border: none;
-  background: url(../images/arrow-next.svg) center center/38px 28px no-repeat;
-  width: 55px;
-  height: 16px;
-  position: fixed;
-  top: 50%;
-  right: 0;
-  margin-right: 5rem;
-  color: #fff;
-  z-index: 11;
-  opacity: 0.5;
-  cursor: pointer;
-}
-.lightbox .lightbox__prev {
-  border: none;
-  background: url(../images/arrow-prev.svg) center center/38px 28px no-repeat;
-  width: 55px;
-  height: 16px;
-  position: fixed;
-  top: 50%;
-  left: 0;
-  margin-left: 5rem;
-  color: #fff;
-  z-index: 11;
-  opacity: 0.5;
-  cursor: pointer;
-}
-.lightbox .lightbox__close {
-  border: none;
-  background: url(../images/close.svg) center center/23px 23px no-repeat;
-  width: 23px;
-  height: 23px;
-  position: fixed;
-  top: 5rem;
-  right: 5rem;
-  z-index: 11;
-  opacity: 0.5;
-  cursor: pointer;
-}
-.lightbox .lightbox__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  min-height: 100vh;
-}
-
-.lightbox.open {
-  display: block;
-  z-index: 10;
-}
-
 /* Responsive */
 @media (max-width: 1515px) {
   .latest-photos img.thumbnail-photos {
@@ -673,6 +610,98 @@ p.title-lated-posts {
     height: 280px;
   }
 }
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.lightbox .lightbox__next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: none;
+  background: url(../images/arrow-next.svg) center center/38px 28px no-repeat;
+  width: 55px;
+  height: 16px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-right: 5rem;
+  color: #fff;
+  z-index: 11;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.lightbox .lightbox__next::after {
+  content: "Suivante";
+  margin: -5rem;
+}
+.lightbox .lightbox__prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border: none;
+  background: url(../images/arrow-prev.svg) center center/38px 28px no-repeat;
+  width: 55px;
+  height: 16px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  margin-left: 5rem;
+  color: #fff;
+  z-index: 11;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.lightbox .lightbox__prev::after {
+  content: "Précente";
+  margin: -5rem;
+}
+.lightbox .lightbox__close {
+  border: none;
+  background: url(../images/close.svg) center center/23px 23px no-repeat;
+  width: 23px;
+  height: 23px;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 11;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.lightbox .lightbox__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  min-height: 100vh;
+}
+.lightbox .lightbox__container img {
+  height: 800px;
+  object-fit: cover;
+}
+.lightbox .lightbox__container .lightbox__footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.lightbox .lightbox__container .lightbox__footer p {
+  color: #fff;
+}
+
+.lightbox.open {
+  display: block;
+  z-index: 10;
+}
+
 /* ==========================================================================
  # Font faces declarations
 ========================================================================== */
@@ -1062,6 +1091,22 @@ video {
   --font-title: "Space-Mono",sans-serif;
 }
 
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeLeftClose {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @media (min-width: 992px) {
   img.button-nav-menu-mobile {
     display: none;
@@ -1104,6 +1149,7 @@ video {
   }
   ul#menu-menu-principal {
     display: none;
+    animation: fadeLeftClose 1s;
   }
   .open ul#menu-menu-principal {
     display: flex;
@@ -1113,13 +1159,14 @@ video {
     position: absolute;
     top: 100%;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     flex-direction: column;
     color: #FFF;
     background-color: #E00000;
     left: 0;
     z-index: 9999;
     padding: 0;
+    animation: fadeLeft 1s;
   }
   .open ul#menu-menu-principal li {
     margin-right: 0;
