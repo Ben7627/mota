@@ -15,13 +15,6 @@ jQuery(document).ready(function($) {
             order: order
         };
 
-        // Pour remplacement du titre du select
-        let categoryText = $('.select-categories .active').text();
-        titreCategory.text(categoryText);
-
-        let formatText = $('.select-filters .active').text();
-        titreFormat.text(formatText);
-
 
         $.ajax({
             url: mota_js.ajaxurl,
