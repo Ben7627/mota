@@ -27,7 +27,9 @@
         <button class="lightbox__next"></button>
         <button class="lightbox__prev"></button>
         <div class="lightbox__container">
-            <?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'lightbox-photos' ) ); ?>
+            <div class="lightbox__img">
+                <?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'lightbox-photos' ) ); ?>
+            </div>    
             <div class="lightbox__footer">
                 <p class="ref-overlay"><?php $reference = get_field( 'reference', $post->ID ); echo esc_html( $reference ); ?></p>
                 <p class="categ-overlay">
