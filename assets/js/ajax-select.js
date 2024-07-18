@@ -3,9 +3,7 @@ jQuery(document).ready(function($) {
 
     function filterPhotos() {
         let category = $('.select-categories .active').data('slug') || '';
-        let titreCategory = $('.title-filters-categories');
         let format = $('.select-filters .active').data('format') || '';
-        let titreFormat = $('.title-filters-formats');
         let paged = 1; 
         let data = {
             action: 'mota_filters_select',
@@ -26,6 +24,7 @@ jQuery(document).ready(function($) {
                 let result = JSON.parse(response);
                 if (result.html) {
                     $('.latest-photos').html(result.html);
+                    attachLightboxListeners();
                 }
             },
             error: function(xhr, status, error) {

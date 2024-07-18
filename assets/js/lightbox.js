@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-
+function attachLightboxListeners() {
     let imgOpen = document.querySelectorAll('.img-container');
     let currentImgIndex = 0;
 
@@ -43,4 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
             showImage(currentImgIndex + 1);
         });
     }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    attachLightboxListeners(); // Attache les écouteurs d'événements au chargement initial
 });

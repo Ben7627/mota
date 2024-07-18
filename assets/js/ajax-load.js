@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
                     $('.load-button-photos').hide();
                 } else {
                     $('.latest-photos').append(res.html);
+                    attachLightboxListeners();
                 }
                 if (!res.more_posts) {
                     $('.load-button-photos').hide();

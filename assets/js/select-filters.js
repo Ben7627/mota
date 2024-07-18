@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     let buttonCategorie = document.querySelector('.title-filters-categories');
     let selectCategorie = document.querySelector('.select-categories');
+    let buttonFilters = document.querySelector('.title-filters-formats');
+    let selectFilters = document.querySelector('.select-filters');
+    let buttonTri = document.querySelector('.title-filters-tri');
+    let selectTri = document.querySelector('.select-tri');
 
-    if (buttonCategorie) {
         buttonCategorie.addEventListener('click', function(event) {
             if (buttonCategorie.classList.contains('active')) {
                 selectCategorie.classList.remove('open');
@@ -12,12 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 buttonCategorie.classList.add('active');
             }
         });
-    }
 
-    let buttonFilters = document.querySelector('.title-filters-formats');
-    let selectFilters = document.querySelector('.select-filters');
-
-    if (buttonFilters) {
         buttonFilters.addEventListener('click', function(event) {
             if (buttonFilters.classList.contains('active')) {
                 selectFilters.classList.remove('open');
@@ -27,12 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 buttonFilters.classList.add('active');
             }
         });
-    }
 
-    let buttonTri = document.querySelector('.title-filters-tri');
-    let selectTri = document.querySelector('.select-tri');
-
-    if (buttonTri) {
         buttonTri.addEventListener('click', function(event) {
             if (buttonTri.classList.contains('active')) {
                 selectTri.classList.remove('open');
@@ -42,6 +35,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 buttonTri.classList.add('active');
             }
         });
-    }
-
 });
