@@ -3,6 +3,7 @@
   
     function mota_load_more() {
         $paged = $_POST['paged'];
+        $category = $_POST['category'];
         $args = array(
             'post_type' => 'photo',
             'posts_per_page' => 8,
@@ -11,6 +12,15 @@
             'order' => 'DESC',
             'post_status' => 'publish',
         );
+
+        if (!empty($category)) {
+            $tax_query[] = array(
+                'taxonomy' => 'categoriesphotos',
+                'field'    => 'slug',
+                'terms'    => $category,
+            );
+        }
+
         $posts = new WP_Query($args);
     
         ob_start();

@@ -45,5 +45,5 @@ function attachLightboxListeners() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    attachLightboxListeners(); // Attache les écouteurs d'événements au chargement initial
+    attachLightboxListeners();
 });

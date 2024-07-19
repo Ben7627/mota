@@ -131,12 +131,12 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   list-style: none;
   cursor: pointer;
 }
+.filters-photos .filters-left .select-categories li:hover {
+  background-color: #FFD6D6;
+}
 .filters-photos .filters-left .select-categories li:active {
   background-color: #FE5858;
   color: #fff;
-}
-.filters-photos .filters-left .select-categories li:hover {
-  background-color: #FFD6D6;
 }
 .filters-photos .filters-left .select-categories li.active {
   background-color: #E00000;
@@ -250,6 +250,10 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   cursor: pointer;
   font-size: 0.8rem;
   font-family: var(--font-title);
+}
+.load-button p.load-button-photos:hover {
+  background: #000;
+  color: #fff;
 }
 
 /* Responsive */

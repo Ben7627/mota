@@ -39,16 +39,40 @@ jQuery(document).ready(function($) {
         $('.select-categories li').removeClass('active');
         $(this).addClass('active');
         let categoryText = $(this).text();
-        $('.title-filters-categories').text(categoryText);
-        filterPhotos();
+        $.ajax({
+            url: mota_js.ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'get_chevron_svg'
+            },
+            success: function(response) {
+                $('.title-filters-categories').html(categoryText + response);
+                filterPhotos();
+            },
+            error: function(xhr, status, error) {
+                console.error('Erreur lors de la récupération du SVG : ', error);
+            }
+        });
     });
 
     $('.select-filters li').on('click', function() {
         $('.select-filters li').removeClass('active');
         $(this).addClass('active');
         let formatText = $(this).text();
-        $('.title-filters-formats').text(formatText);
-        filterPhotos();
+        $.ajax({
+            url: mota_js.ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'get_chevron_svg'
+            },
+            success: function(response) {
+                $('.title-filters-formats').html(formatText + response);
+                filterPhotos();
+            },
+            error: function(xhr, status, error) {
+                console.error('Erreur lors de la récupération du SVG : ', error);
+            }
+        });
     });
 
     $('.tri-croissant').on('click', function() {
@@ -56,7 +80,21 @@ jQuery(document).ready(function($) {
         $('.tri-decroissant').removeClass('active');
         $('.tri-croissant').removeClass('active');
         $(this).addClass('active');
-        filterPhotos();
+        let ascText = $(this).text();
+        $.ajax({
+            url: mota_js.ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'get_chevron_svg'
+            },
+            success: function(response) {
+                $('.title-filters-tri').html(ascText + response);
+                filterPhotos();
+            },
+            error: function(xhr, status, error) {
+                console.error('Erreur lors de la récupération du SVG : ', error);
+            }
+        });
     });
 
     $('.tri-decroissant').on('click', function() {
@@ -64,6 +102,20 @@ jQuery(document).ready(function($) {
         $('.tri-croissant').removeClass('active');
         $('.tri-decroissant').removeClass('active');        
         $(this).addClass('active');
-        filterPhotos();
+        let descText = $(this).text();
+        $.ajax({
+            url: mota_js.ajaxurl,
+            type: 'POST',
+            data: {
+                action: 'get_chevron_svg'
+            },
+            success: function(response) {
+                $('.title-filters-tri').html(descText + response);
+                filterPhotos();
+            },
+            error: function(xhr, status, error) {
+                console.error('Erreur lors de la récupération du SVG : ', error);
+            }
+        });
     });
 });
