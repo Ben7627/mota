@@ -1,10 +1,11 @@
-jQuery(document).ready(function($) {
-    let order = 'DESC';
+let currentPage = 1;
+let order = 'DESC';
 
-    function filterPhotos() {
+jQuery(document).ready(function($) {
+    function filterPhotos(paged = 1) {
         let category = $('.select-categories .active').data('slug') || '';
         let format = $('.select-filters .active').data('format') || '';
-        let paged = 1; 
+        
         let data = {
             action: 'mota_filters_select',
             category: category,
@@ -13,18 +14,26 @@ jQuery(document).ready(function($) {
             order: order
         };
 
-
         $.ajax({
             url: mota_js.ajaxurl,
             type: 'POST',
             data: data,
             beforeSend: function() {
+                // Optionally show a loading indicator
             },
             success: function(response) {
                 let result = JSON.parse(response);
-                if (result.html) {
+                if (paged === 1) {
                     $('.latest-photos').html(result.html);
-                    attachLightboxListeners();
+                } else {
+                    $('.latest-photos').append(result.html);
+                }
+                attachLightboxListeners();
+                
+                if (!result.more_posts) {
+                    $('.load-button-photos').hide();
+                } else {
+                    $('.load-button-photos').show();
                 }
             },
             error: function(xhr, status, error) {
@@ -33,12 +42,17 @@ jQuery(document).ready(function($) {
         });
     }
 
+    $('.load-button-photos').on('click', function() {
+        currentPage++;
+        filterPhotos(currentPage);
+    });
 
-    
     $('.select-categories li').on('click', function() {
         $('.select-categories li').removeClass('active');
         $(this).addClass('active');
         let categoryText = $(this).text();
+        currentPage = 1;
+
         $.ajax({
             url: mota_js.ajaxurl,
             type: 'POST',
@@ -47,7 +61,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 $('.title-filters-categories').html(categoryText + response);
-                filterPhotos();
+                filterPhotos(currentPage);
             },
             error: function(xhr, status, error) {
                 console.error('Erreur lors de la récupération du SVG : ', error);
@@ -59,6 +73,8 @@ jQuery(document).ready(function($) {
         $('.select-filters li').removeClass('active');
         $(this).addClass('active');
         let formatText = $(this).text();
+        currentPage = 1;
+
         $.ajax({
             url: mota_js.ajaxurl,
             type: 'POST',
@@ -67,7 +83,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 $('.title-filters-formats').html(formatText + response);
-                filterPhotos();
+                filterPhotos(currentPage);
             },
             error: function(xhr, status, error) {
                 console.error('Erreur lors de la récupération du SVG : ', error);
@@ -81,6 +97,8 @@ jQuery(document).ready(function($) {
         $('.tri-croissant').removeClass('active');
         $(this).addClass('active');
         let ascText = $(this).text();
+        currentPage = 1;
+
         $.ajax({
             url: mota_js.ajaxurl,
             type: 'POST',
@@ -89,7 +107,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 $('.title-filters-tri').html(ascText + response);
-                filterPhotos();
+                filterPhotos(currentPage);
             },
             error: function(xhr, status, error) {
                 console.error('Erreur lors de la récupération du SVG : ', error);
@@ -103,6 +121,8 @@ jQuery(document).ready(function($) {
         $('.tri-decroissant').removeClass('active');        
         $(this).addClass('active');
         let descText = $(this).text();
+        currentPage = 1;
+
         $.ajax({
             url: mota_js.ajaxurl,
             type: 'POST',
@@ -111,11 +131,12 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 $('.title-filters-tri').html(descText + response);
-                filterPhotos();
+                filterPhotos(currentPage);
             },
             error: function(xhr, status, error) {
                 console.error('Erreur lors de la récupération du SVG : ', error);
             }
         });
     });
+
 });

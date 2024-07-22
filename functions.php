@@ -15,7 +15,6 @@
 // require_once 'inc/_conf/register-blocks.php';
 require_once 'inc/register-acf.php';
 require_once 'inc/register-post-type.php';
-require_once 'inc/ajax/register-button-load-more.php';
 require_once 'inc/ajax/register-filters-select.php';
 
 

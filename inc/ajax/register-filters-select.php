@@ -2,9 +2,9 @@
     // Règle ajax filtres select homepage
 
     function mota_filters_select() {
-        $paged = $_POST['paged'];
-        $category = $_POST['category'];
-        $format = $_POST['format'];
+        $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
+        $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
+        $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
         $order = isset($_POST['order']) ? sanitize_text_field($_POST['order']) : 'DESC';
     
         $tax_query = array('relation' => 'AND');
@@ -60,17 +60,17 @@
         }
         wp_die();
     }
-
-add_action('wp_ajax_mota_filters_select', 'mota_filters_select');
-add_action('wp_ajax_nopriv_mota_filters_select', 'mota_filters_select');
-
-//  AJAX pour récupérer le SVG
-function get_chevron_svg() {
-    $svg_path = get_stylesheet_directory() . '/assets/images/chevron.svg';
-    if (file_exists($svg_path)) {
-        echo file_get_contents($svg_path);
+    
+    add_action('wp_ajax_mota_filters_select', 'mota_filters_select');
+    add_action('wp_ajax_nopriv_mota_filters_select', 'mota_filters_select');
+    
+    // AJAX pour récupérer le SVG
+    function get_chevron_svg() {
+        $svg_path = get_stylesheet_directory() . '/assets/images/chevron.svg';
+        if (file_exists($svg_path)) {
+            echo file_get_contents($svg_path);
+        }
+        wp_die(); 
     }
-    wp_die(); 
-}
-add_action('wp_ajax_get_chevron_svg', 'get_chevron_svg');
-add_action('wp_ajax_nopriv_get_chevron_svg', 'get_chevron_svg');
+    add_action('wp_ajax_get_chevron_svg', 'get_chevron_svg');
+    add_action('wp_ajax_nopriv_get_chevron_svg', 'get_chevron_svg');

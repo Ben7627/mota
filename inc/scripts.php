@@ -9,7 +9,6 @@ function mota_scripts ()
     wp_enqueue_script('select-script', get_stylesheet_directory_uri() . '/assets/js/select-filters.js');
     wp_enqueue_script('lightbox-script', get_stylesheet_directory_uri() . '/assets/js/lightbox.js');
     wp_enqueue_script('ajax-contact-script', get_stylesheet_directory_uri() . '/assets/js/ajax-contact.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('ajax-load-script', get_stylesheet_directory_uri() . '/assets/js/ajax-load.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('ajax-select-script', get_stylesheet_directory_uri() . '/assets/js/ajax-select.js', array('jquery'), '1.0.0', true);
 
     // Localize scripts for AJAX

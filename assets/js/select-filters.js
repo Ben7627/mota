@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     let buttonCategorie = document.querySelector('.title-filters-categories');
     let selectCategorie = document.querySelector('.select-categories');
+
     let buttonFilters = document.querySelector('.title-filters-formats');
     let selectFilters = document.querySelector('.select-filters');
+
     let buttonTri = document.querySelector('.title-filters-tri');
     let selectTri = document.querySelector('.select-tri');
 
@@ -14,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectCategorie.classList.add('open');
                 buttonCategorie.classList.add('active');
             }
+            
         });
 
         buttonFilters.addEventListener('click', function(event) {

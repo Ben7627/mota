@@ -54,7 +54,17 @@
     opacity: 0.8;
 }
 
+@media (min-width: 992px) {
+    .align-popup .popup form.wpcf7-form.wpcf7-form--inverse.invalid {
+        bottom: 4rem;
+        position: relative;
+    }
+    form.wpcf7-form.wpcf7-form--inverse.invalid {
+    height: 100vh;
+    background-color: #fff;
+    }
 
+}
 
 
 /* Responsive */
