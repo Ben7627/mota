@@ -72,6 +72,9 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                     background-color: #E00000;
                     color: #fff;                     
                 }
+                li.all-categories {
+                    opacity: 0;
+                }
             }
 
             p.title-filters-formats {
@@ -114,6 +117,9 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                     li.active {
                         background-color: #E00000;
                         color: #fff;                      
+                    }
+                    li.all-formats {
+                        opacity: 0;
                     }
                 }
             }
@@ -171,7 +177,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 .home .latest-photos {
     flex-wrap: wrap;
         .img-container {
-            width: calc(50% - 2rem);
+            width: calc(50% - 1rem);
         }
 }
 

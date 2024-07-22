@@ -142,6 +142,9 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   background-color: #E00000;
   color: #fff;
 }
+.filters-photos .filters-left .select-categories li.all-categories {
+  opacity: 0;
+}
 .filters-photos .filters-left p.title-filters-formats {
   display: flex;
   justify-content: space-between;
@@ -179,6 +182,9 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 .filters-photos .filters-left .select-filters li.active {
   background-color: #E00000;
   color: #fff;
+}
+.filters-photos .filters-left .select-filters li.all-formats {
+  opacity: 0;
 }
 
 .filters-right {
@@ -231,7 +237,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
   flex-wrap: wrap;
 }
 .home .latest-photos .img-container {
-  width: calc(50% - 2rem);
+  width: calc(50% - 1rem);
 }
 
 .load-button {
@@ -353,7 +359,7 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
 @media (max-width: 992px) {
   .align-popup .popup {
     width: auto;
-    height: 100vh;
+    height: 82vh;
   }
   .align-popup .popup textarea {
     height: 100px;
@@ -509,7 +515,7 @@ a:hover img.previous-img-photo.wp-post-image {
   margin-right: 10rem;
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
 }
 .latest-photos .img-container {
   position: relative;
@@ -631,7 +637,7 @@ p.title-lated-posts {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .lightbox .lightbox__next {
   display: flex;
@@ -648,7 +654,7 @@ p.title-lated-posts {
   margin-right: 5rem;
   color: #fff;
   z-index: 11;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
 }
 .lightbox .lightbox__next::after {
@@ -670,7 +676,7 @@ p.title-lated-posts {
   margin-left: 5rem;
   color: #fff;
   z-index: 11;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
 }
 .lightbox .lightbox__prev::after {
@@ -686,7 +692,7 @@ p.title-lated-posts {
   top: 5rem;
   right: 5rem;
   z-index: 11;
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
 }
 .lightbox .lightbox__container {

@@ -71,6 +71,7 @@ get_header(); ?>
                         <div class="filters-categories">
                                 <p class="title-filters-categories">Catégories :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
                                 <ul class="select-categories filtrage">
+                                <li class="all-categories">Catégories :</li>
                                 <?php
                                 foreach ( $categories as $category ) {
                                         echo '<li data-slug="'. esc_html($category->slug) .'">' . esc_html( $category->name ) . '</li>';
@@ -90,6 +91,7 @@ get_header(); ?>
                         <div class="filters-formats">
                                 <p class="title-filters-formats">Formats :<?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/chevron.svg');?></p>
                                 <ul class="select-filters filtrage">
+                                <li class="all-formats">Formats :</li>
                                 <?php
                                 foreach ( $formats as $format ) {
                                         echo '<li data-format="'. esc_html($format->slug) .'">' . esc_html( $format->name ) . '</li>';
