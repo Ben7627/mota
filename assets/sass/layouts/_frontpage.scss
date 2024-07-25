@@ -50,6 +50,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             }
             ul.select-categories.open {
                 display: block;
+                position: absolute;
+                z-index: 9999;
             }
             .select-categories {
                     li {
@@ -73,7 +75,11 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                     color: #fff;                     
                 }
                 li.all-categories {
-                    opacity: 0;
+                    color: #fff;
+
+                    &:hover {
+                        color: #000;
+                    }
                 }
             }
 
@@ -96,6 +102,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             }
             ul.select-filters.open {
                 display: block;
+                position: absolute;
+                z-index: 9999;
             }
             .select-filters {
                     li {
@@ -119,7 +127,11 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                         color: #fff;                      
                     }
                     li.all-formats {
-                        opacity: 0;
+                        color: #fff;
+
+                        &:hover {
+                            color: #000;
+                        }
                     }
                 }
             }
@@ -149,6 +161,8 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
             }
             ul.select-tri.open {
                 display: block;
+                position: absolute;
+                z-index: 9999;
             }
             .select-tri {
                 li {
@@ -173,6 +187,22 @@ img.attachment-home-featured.size-home-featured.wp-post-image {
                 }
             }
         }
+
+
+.select-categories li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.select-filters li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.select-tri li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
 
 .home .latest-photos {
     flex-wrap: wrap;

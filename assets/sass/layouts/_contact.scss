@@ -80,3 +80,10 @@
         }
     }
 }
+
+@media (min-width: 992px) and (max-width: 1440px) {
+    .align-popup .popup {
+        height: 720px;
+        margin-top: -3rem;
+    }
+}
